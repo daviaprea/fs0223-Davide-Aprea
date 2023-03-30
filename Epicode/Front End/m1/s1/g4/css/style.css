@@ -9,7 +9,7 @@ body{
 /* HEADER */
 header{
     text-align: center;
-    background-color: blue;
+    background-image: linear-gradient(rgb(43, 141, 131), rgb(20, 75, 69));
     padding: 30px 10px;
     margin-bottom: 20px;
     font-weight: bold;
@@ -46,6 +46,10 @@ main{
 
 main p, main ul, main ol{
     margin-top: 15px;
+}
+
+ul, ol{
+    list-style-position: inside;
 }
 
 main h1{
