@@ -1,0 +1,133 @@
+/* IMPOSTAZIONI GENERALI */
+body{
+    padding: 20px;
+    line-height: 1.6;
+    background-image: url("../img/sfondo.png");
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+header{
+    text-align: center;
+    background-color: blue;
+    padding: 30px 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header img{
+    height: 70px;
+}
+
+header p{
+    margin: 20px;
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header a, header p{
+    color: aliceblue;
+}
+
+header a{
+    text-decoration: none;
+}
+
+/* MAIN */
+main{
+    background-color: white;
+    padding: 30px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+}
+
+main p, main ul, main ol{
+    margin-top: 15px;
+}
+
+main h1{
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+main span{
+    color: darkmagenta;
+    font-weight: bold;
+}
+
+main code{
+    background-color: rgb(219, 218, 218);
+    border-radius: 4px;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+iframe{
+    margin: 15px 0;
+    border-radius: 25px;
+}
+
+main a{
+    color: rgb(20, 179, 163);
+    font-weight: bold;
+}
+
+/* TABELLA */
+table{
+    border-bottom: 2px solid rgb(79, 134, 238);
+    width: 100%;
+}
+
+thead{
+    background-color: rgb(79, 134, 238);
+    color: white;
+}
+
+td, th{
+    padding: 5px 0;
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(228, 228, 228);
+}
+
+/* NOVITA */
+h2{
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.novita form{
+    text-align: center;
+}
+
+.novita{
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+}
+
+/* CORRELATI */
+.correlati div{
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid rgb(167, 167, 167);
+}
+
+/* FOOTER */
+footer{
+    background-color: rgb(1, 88, 88);
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    color: fuchsia;
+    font-weight: bold;
+}
