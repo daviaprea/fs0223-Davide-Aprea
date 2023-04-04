@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <section>
+
+        <div class="dispContainer">
+            <input type="text" class="display dispPiccolo" id="display2" value="0" maxlength="16">
+            <input type="text" class="display dispGrande" id="display" value="0" maxlength="16">
+        </div>
+
+        <div class="tastieraContainer">
+            <div class="tastiera">
+                <button class="operatore" onclick="">%</button>
+                <button class="operatore cancOp" onclick="canc()">CE</button>
+                <button class="operatore cancOp" onclick="cancEv()">C</button>
+                <button class="operatore cancOp" onclick="del()"><</button>
+                <button class="operatore" onclick="onedivx()">1/x</button>
+                <button class="operatore" onclick="sq()">x2</button>
+                <button class="operatore" onclick="sr()">√</button>
+                <button class="operatore" onclick="op('/')">/</button>
+                <button class="numero">7</button>
+                <button class="numero">8</button>
+                <button class="numero">9</button>
+                <button class="operatore" onclick="op('x')">x</button>
+                <button class="numero">4</button>
+                <button class="numero">5</button>
+                <button class="numero">6</button>
+                <button class="operatore" onclick="op('-')">-</button>
+                <button class="numero">1</button>
+                <button class="numero">2</button>
+                <button class="numero">3</button>
+                <button class="operatore" onclick="op('+')">+</button>
+                <button class="operatore2" onclick="changeSign()">±</button>
+                <button class="numero">0</button>
+                <button class="operatore2" onclick="addComma()">.</button>
+                <button class="equals">=</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
