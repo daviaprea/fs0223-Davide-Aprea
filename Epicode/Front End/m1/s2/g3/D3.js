@@ -30,8 +30,8 @@ if(x%5==0) console.log("Il numero è divisibile per 5.");*/
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let x = prompt("Inserisci il primo numero:");
-let y = prompt("Inserisci il secondo numero:");
+/*let x = Number(prompt("Inserisci il primo numero:"));
+let y = Number(prompt("Inserisci il secondo numero:"));
 if(x==8 || y==8 || x+y==8 || y-x==8) console.log("Ok!");*/
 
 /* ESERCIZIO 5
@@ -41,9 +41,9 @@ if(x==8 || y==8 || x+y==8 || y-x==8) console.log("Ok!");*/
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let totalShoppingCart = prompt("Inserisci il totale che devi pagare:");
+/*let totalShoppingCart = Number(prompt("Inserisci il totale che devi pagare:"));
 if(totalShoppingCart>50) console.log("Spedizione gratuita.");
-else console.log(`Il totale è di ${Number(totalShoppingCart)+10} euro.`);*/
+else console.log(`Il totale è di ${totalShoppingCart+10} euro.`);*/
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -51,9 +51,9 @@ else console.log(`Il totale è di ${Number(totalShoppingCart)+10} euro.`);*/
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let totalShoppingCart = prompt("Inserisci il totale che devi pagare:");
-if(totalShoppingCart>50) console.log(`Spedizione gratuita. Con lo sconto del 20% del Black Friday, al posto di pagare ${totalShoppingCart} euro, l'ammontare è di ${Number(totalShoppingCart)*0.8} euro.`);
-else console.log(`Il totale è di ${(Number(totalShoppingCart)+10)*0.8} euro. Prezzo prima dello sconto: ${Number(totalShoppingCart)+10} euro.`);*/
+/*let totalShoppingCart = Number(prompt("Inserisci il totale che devi pagare:"));
+if(totalShoppingCart>50) console.log(`Spedizione gratuita. Con lo sconto del 20% del Black Friday, al posto di pagare ${totalShoppingCart} euro, l'ammontare è di ${totalShoppingCart*0.8} euro.`);
+else console.log(`Il totale è di ${(totalShoppingCart+10)*0.8} euro. Prezzo prima dello sconto: ${totalShoppingCart+10} euro.`);*/
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -68,13 +68,16 @@ let z=23;
 if(z>y && z>x && y>x) console.log(`${z} ${y} ${x}`);
 else if(x>y && x>z && y>z) console.log(`${x} ${y} ${z}`);
 else if(z>y && z>x && y>x) console.log(`${z} ${y} ${x}`);
+else if(y>z && y>x && z>x) console.log(`${y} ${z} ${x}`);
+else if(y>z && y>x && z>x) console.log(`${y} ${z} ${x}`);
 else if(y>z && y>x && z>x) console.log(`${y} ${z} ${x}`);*/
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
-/*let x = prompt("Inserisci un valore:");
-if(Number(x) == "number") console.log("Hai inserito un numero.");
+/*let x = 23;
+if(typeof x == "number") console.log("Hai inserito un numero.");
 else console.log(`Hai inserito una variabile ${typeof x}`);*/
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -82,11 +85,11 @@ else console.log(`Hai inserito una variabile ${typeof x}`);*/
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
+
+/* SCRIVI QUI LA TUA RISPOSTA */
 /*let x = prompt("Inserisci numero:")
 if(x%2==0) console.log("Il numero è pari.");
 else console.log("Il numero è dispari.");*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -101,10 +104,10 @@ else console.log("Il numero è dispari.");*/
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let num = 7
-  if (num < 10 && num >= 5){
-      console.log("Meno di 10");
-    } else if (num < 5) {
+/*let val = 7
+  if (val < 10 && val >= 5){
+      console.log("Il numero è tra 5 e 10");
+    } else if (val < 5) {
       console.log("Meno di 5");
     } else {
       console.log("Uguale a 10 o maggiore");
@@ -144,7 +147,23 @@ me.skills.pop();
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let vet = [1,2,3,4,5,6,7,8,9,10];
+let vet = [];
+/*vet.push(1);
+vet.push(2);
+vet.push(3);
+vet.push(4);
+vet.push(5);
+vet.push(6);
+vet.push(7);
+vet.push(8);
+vet.push(9);
+vet.push(10);*/
+
+/*for(let i=1; i<=10; i++)
+{
+  vet.push(i);
+}
+console.log(vet);*/
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
