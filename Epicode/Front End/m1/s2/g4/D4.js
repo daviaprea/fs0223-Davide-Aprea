@@ -150,6 +150,7 @@ console.log(femaleCharacters);
     brown: [],
     red: [],
     blueGray: []
+    /*"blue-gray": []*/
   };
 
 /* ESERCIZIO 5
