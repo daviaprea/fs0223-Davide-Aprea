@@ -125,14 +125,19 @@ Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO",
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
 
-  let femaleCharacters=[
+  let femaleCharacters=[];
+  for(let i=0; i<starWarsCharacters.length; i++)
+  {
+    if(starWarsCharacters[i].gender=="female")
     {
-      name: "Leia Organa",
-      hair_color: "brown",
-      eye_color: "brown"
+      femaleCharacters.push({
+        name: starWarsCharacters[i].name,
+        hair_color: starWarsCharacters[i].hair_color,
+        eye_color: starWarsCharacters[i].eye_color
+      });
     }
-  ];
-
+  }
+console.log(femaleCharacters);
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
@@ -172,6 +177,8 @@ for(let i=0; i<starWarsCharacters.length; i++)
       break;
   }
 }
+console.log(eyeColor);
+
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
   */
@@ -179,9 +186,10 @@ let cont=0;
 let massaTot=0;
 while(cont<starWarsCharacters.length)
 {
-  massaTot+=starWarsCharacters[i].mass;
+  massaTot+=Number(starWarsCharacters[cont].mass);
   cont++;
 }
+console.log(`La massa totale è: ${massaTot}`);
 
 /* ESERCIZIO 7
 
@@ -196,11 +204,18 @@ Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump
 
 Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+switch(massaTot)
+{
 
+}
 
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
+for(let i=0; i<starWarsCharacters.length; i++)
+{
+  if(starWarsCharacters[i].gender=="n/a") starWarsCharacters[i].gender = "robot";
+}
 
 /* EXTRA ESERCIZIO 9
 
@@ -211,7 +226,14 @@ Usa uno più for loop per raggiungere il risultato
 
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
+for(let i=0; i<femaleCharacters.length; i++)
+{
+  if(characters.includes(femaleCharacters[i].name)) characters.splice(characters.indexOf(femaleCharacters[i].name),1)
+}
+console.log(characters);
 
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
+let randIndex = Math.floor(Math.random() * starWarsCharacters.length-1);
+console.log(starWarsCharacters[randIndex]);
