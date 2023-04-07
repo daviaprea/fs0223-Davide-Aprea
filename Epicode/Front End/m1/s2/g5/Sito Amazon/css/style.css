@@ -1,0 +1,140 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a, .fLink a{
+    color: white;
+    font-size: 0.6rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*HEADER*/
+header div{
+    background-color: #222F3F;
+    padding: 5px 20px;
+}
+
+header img{
+    height: 30px;
+}
+
+header nav{
+    background-color: #364757;
+    padding: 5px 20px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/*MAIN*/
+h1{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h2{
+    display: inline;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+main a{
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: #0088aa;
+    font-weight: bold;
+}
+
+main{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #E9EDEE;
+}
+
+section{
+    margin: 15px 0;
+}
+
+#sec0{
+    background-color: #F56600;
+    color: white;
+    padding: 5px;
+    font-size: 0.6rem;
+}
+
+span{
+    font-size: 0.6rem;
+}
+
+#sec1{
+    background-image: url("../assets/bg-image.png");
+    background-size: contain;
+    background-position: center;
+    padding: 35px 0;
+    color: white;
+}
+
+#sec2{
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.gift{
+    width: 25%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.giftCont{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.bg1{
+    background-image: url("../assets/img_1.jpg");
+}
+
+.bg2{
+    background-image: url("../assets/img_2.jpg");
+}
+
+.bg3{
+    background-image: url("../assets/img_3.jpg");
+}
+
+.bg4{
+    background-image: url("../assets/img_4.jpg");
+}
+
+main img{
+    width: 100%;
+}
+
+/*FOOTER*/
+footer{
+    text-align: center;
+}
+
+.fImg{
+    background-color: #222F3F;
+    padding: 30px;
+}
+
+.fLink{
+    background-color: #364757;
+    padding: 5px;
+}
+
+.fImg img{
+    height: 40px;
+}
