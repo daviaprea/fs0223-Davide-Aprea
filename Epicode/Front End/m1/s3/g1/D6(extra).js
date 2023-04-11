@@ -187,15 +187,16 @@ console.log(longest(arrayStr));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function matrixGenerator(x, y)
 {
-    let vet=[[]];
+    let vet=[];
     for(let i=0; i<x; i++)
     {
+        vet[i]=[];
         for(let j=0; j<y; j++)
         {
-            vet[j].push(String(i)+String(j));
+            vet[i][j]=String(i)+String(j);
         }
     }
     console.log(vet);
 }
 
-matrixGenerator(3, 2);
+matrixGenerator(4, 3);
