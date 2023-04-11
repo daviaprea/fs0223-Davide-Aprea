@@ -63,7 +63,8 @@ function boundary(n)
 /* SCRIVI QUI LA TUA RISPOSTA */
 function epify(str)
 {
-
+    if(str.startsWith("EPICODE")) return str;
+    else return "EPICODE"+str;
 }
 
 /* ESERCIZIO 6
@@ -90,8 +91,25 @@ function check3and7(n)
 /* SCRIVI QUI LA TUA RISPOSTA */
 function reverseString(str)
 {
-
+    let revStr="";
+    for(let i=str.length-1; i>=0; i--)
+    {
+        revStr+=str[i];
+    }
+    console.log(revStr);
 }
+
+//OPPURE
+function reverseString2(str)
+{
+    let revStr=str.split("");
+    let arr= revStr.reverse();
+    let finRevStr=arr.join("");
+    console.log(finRevStr);
+}
+
+reverseString("Ciao, mi chiamo Davide.");
+reverseString2("Ciao, mi chiamo Davide.");
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -101,8 +119,18 @@ function reverseString(str)
 /* SCRIVI QUI LA TUA RISPOSTA */
 function upperFirst(str)
 {
-    
+    let upArr=str.split(" ");
+    let saveArr=[];
+    for(word of upArr)
+    {
+        saveArr.push(word.charAt(0).toUpperCase()+word.slice(1, word.length));
+    }
+    let upStr=saveArr.join(" ");
+
+    console.log(upStr);
 }
+
+upperFirst("Ciao, mi chiamo Davide.");
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -110,9 +138,27 @@ function upperFirst(str)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(str)
+{
+    console.log(str.slice(1, str.length-1));
+}
+
+cutString("Ciao, mi chiamo Davide.");
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(n)
+{
+    let arr=[];
+    for(let i=0; i<n; i++)
+    {
+        arr.push(Math.floor(Math.random() * 11));
+    }
+    console.log(arr);
+}
+
+giveMeRandom(8);
