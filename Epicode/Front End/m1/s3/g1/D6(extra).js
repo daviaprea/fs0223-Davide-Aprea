@@ -20,7 +20,7 @@ function giveMeRandom(n)
 function checkArray(arr)
 {
     let somma=0;
-    for(el of arr)
+    for(let el of arr)
     {
         if(el>5)
         {
@@ -68,7 +68,7 @@ function shoppingCartTotal(objArr)
     let tot=0;
     for(el of objArr)
     {
-        tot+=el.price;
+        tot+=el.price*el.quantity;
     }
     console.log(`Totale da pagare: ${tot}`);
 }
@@ -175,6 +175,10 @@ console.log(longest(arrayStr));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function diffData(d)
+{
+
+}
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come paremetri due numeri interi, "x" e "y".
