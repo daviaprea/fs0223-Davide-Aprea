@@ -194,10 +194,9 @@ function matrixGenerator(x, y)
     let vet=[];
     for(let i=0; i<x; i++)
     {
-        vet[i]=[];
         for(let j=0; j<y; j++)
         {
-            vet[i][j]=String(i)+String(j);
+            vet.push(String(i)+String(j));
         }
     }
     console.log(vet);
