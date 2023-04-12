@@ -6,7 +6,7 @@ function concStr(a, b)
 {
   let aStr = a.slice(0, 3);
   let bStr = b.slice(b.length-4, b.length);
-  upStr = a.toUpperCase()+b.toUpperCase();
+  upStr = aStr.toUpperCase()+bStr.toUpperCase();
   console.log(upStr);
 }
 
@@ -16,10 +16,7 @@ function concStr(a, b)
 function randArr()
 {
   let arr=[];
-  for(let i=0; i<10; i++)
-  {
-    arr.push(Math.floor(Math.random() * 101));
-  }
+  for(let i=0; i<10; i++) arr.push(Math.floor(Math.random() * 101));
   return arr;
 }
 
@@ -28,19 +25,15 @@ function randArr()
 */
 function arrEven(arr)
 {
-  return arr.filter(checkEven);
-  function checkEven(el)
-  {
-    if(el%2==0) return el;
-  }
+  return arr.filter(el => el%2==0);
 }
-
 console.log(arrEven(randArr()));
 
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 let result = randArr().reduce((sum, currVal)=>sum+currVal);
+console.log(result);
 
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
@@ -49,7 +42,18 @@ let result = randArr().reduce((sum, currVal)=>sum+currVal);
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+  function inc(vet)
+  {
+    let vet2=[...vet];
+    for(let i=0; i<vet2.length; i++)
+    {
+      vet2[i]+=vet2.length;
+    }
+    return vet2;
+  }
 
+  let vect=[1,2,3,4,5,6,7];
+  console.log(inc(vect));
 
 /* ESERCIZIO 8
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -58,15 +62,23 @@ let result = randArr().reduce((sum, currVal)=>sum+currVal);
 function strLen(arr)
 {
   let arrStr=[]
-  for(let str of arr)
-  {
-
-  }
+  for(let str of arr) arrStr.push(str.length);
+  return arrStr;
 }
+
+let stringArr=["EPICeeeODE", "isss", "grefeat"];
+console.log(strLen(stringArr));
 
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+function onlyOdd()
+{
+  let vet=[];
+  for(let i=1; i<=99; i++) if(i%2!=0) vet.push(i);
+  return vet;
+}
+console.log(onlyOdd());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -182,23 +194,51 @@ const movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+function older(vet)
+{
+  return vet.reduce((a, b) => a.Year<b.Year ? a:b);
+}
+console.log(older(movies));
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+console.log(`Numero film disponibili: ${movies.length}`);
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+function movieTitle(vet)
+{
+  let arr = [];
+  for(el of vet) arr.push(el.Title);
+  return arr;
+}
+console.log(movieTitle(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+function millMovie(vet)
+{
+  return vet.filter(el => el.Year>2000);
+}
+console.log(millMovie(movies));
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+function selMovie(vet, id)
+{
+  return vet.filter(el => el.imdbID==id);
+}
+console.log(selMovie(movies, "tt1731697"));
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+function sumYearMovie(vet)
+{
+  return vet.reduce((a, b) => Number(a.Year)+Number(b.Year));
+}
+console.log(sumYearMovie(movies));
