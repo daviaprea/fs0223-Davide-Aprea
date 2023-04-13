@@ -4,10 +4,11 @@
 */
 function concStr(a, b)
 {
-  let aStr = a.slice(0, 3);
-  let bStr = b.slice(b.length-4, b.length);
-  upStr = aStr.toUpperCase()+bStr.toUpperCase();
-  console.log(upStr);
+  let aStr = a.slice(0, 2);
+  let bStr = b.slice(b.length-3, b.length);
+  let upStr = aStr.toUpperCase()+bStr.toUpperCase();
+  return upStr;
+  //console.log(upStr);
 }
 
 /* ESERCIZIO 2
@@ -228,17 +229,23 @@ console.log(millMovie(movies));
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-function selMovie(vet, id)
+/*function selMovie(vet, id)
 {
   return vet.filter(el => el.imdbID==id);
 }
-console.log(selMovie(movies, "tt1731697"));
+console.log(selMovie(movies, "tt1731697"));*/
+
+function selMovie2(vet, id)
+{
+  return vet.find(el => el.imdbID==id);
+}
+console.log(selMovie2(movies, "tt0120737"));
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 function sumYearMovie(vet)
 {
-  return vet.reduce((a, b) => Number(a.Year)+Number(b.Year));
+  return vet.reduce((a, b) => a+Number(b.Year),0);
 }
 console.log(sumYearMovie(movies));
