@@ -192,38 +192,38 @@
     const obj=[
       [
         `<img src="assets/img_1.jpg" alt="Pic 1">`,
-        "Qualcosa",
+        "Notebook",
         1,
         200
       ],
 
       [
         `<img src="assets/img_2.jpg" alt="Pic 2">`,
-        "Qualcosa",
+        "PC",
         2,
         2300
       ],
 
       [
         `<img src="assets/img_3.jpg" alt="Pic 3">`,
-        "Qualcosa",
+        "Orologi",
         4,
         2020
       ],
 
       [
         `<img src="assets/img_4.jpg" alt="Pic 4">`,
-        "Qualcosa",
+        "Cane",
         1,
         500
       ],
 
       [
         `<img src="assets/img_9.png" alt="Pic 5">`,
-        "Qualcosa",
+        "Musica",
         1,
         277
-    ]
+      ]
     ];
 
     const generateTable = function () {
@@ -231,10 +231,9 @@
       let tab = document.createElement("table");
       let tabth = ["immagine", "nome prodotto", "quantità", "prezzo"];
       let vet=[];
-      for(let r=0; r<5; r++)
+      for(let r=0; r<obj.length; r++)
       {
         vet[r]=document.createElement("tr");
-
         tab.append(vet[r]);
         for(let c=0; c< 4; c++)
         {
@@ -243,6 +242,7 @@
           vet[r].append(vet[r][c]);
         }
       }
+
       tab.style.width="100%";
       tab.style.border="1px solid black";
       tabArea.append(tab);
@@ -262,11 +262,11 @@
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-    const hideAllImages = function () {
+    /*const hideAllImages = function () {
       let arr = document.querySelectorAll("table img");
       arr.forEach(el => el.style.display="none");
     }
-    hideAllImages();
+    hideAllImages();*/
 
     /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
