@@ -91,16 +91,16 @@ function deleteOne(str, b=true)
 */
 function onlyLetters(str)
 {
-  let arr = str.split("");
-  let n = arr.filter(el => Number(el)==NaN);
-  console.log(n);
+  return str.replaceAll(/[0-9]/g, "");
 }
-onlyLetters("C1a2o3n4e");
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
-
+function isThisAnEmail(str)
+{
+  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str);
+}
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
@@ -108,9 +108,10 @@ onlyLetters("C1a2o3n4e");
 function whatDayIsIt()
 {
   let date=new Date();
-  let weekday=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  return weekday[date.getDay()-1];
+  let weekday=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return weekday[date.getDay()];
 }
+
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
@@ -141,6 +142,8 @@ function rollTheDices(n)
 function howManyDays(d)
 {
   let current = new Date();
+  let chosenDate=new Date(d);
+  return Math.floor((current-chosenDate)/(1000*60*60*24));
 }
 
 /* ESERCIZIO 10
@@ -213,7 +216,7 @@ function sumAllTheYears()
 */
 function searchByTitle(str)
 {
-  return movies.filter(el => el.Title.includes(str));
+  return movies.filter(el => el.Title.toUpperCase().includes(str.toUpperCase()));
 }
 
 /* ESERCIZIO 18
@@ -223,8 +226,8 @@ function searchByTitle(str)
 function searchAndDivide(str)
 {
   let obj={
-    match: movies.filter(el => el.Title.includes(str)),
-    unmatch: movies.filter(el => el.Title.includes(str)==false)
+    match: movies.filter(el => el.Title.toUpperCase().includes(str.toUpperCase())),
+    unmatch: movies.filter(el => el.Title.toUpperCase().includes(str.toUpperCase())==false)
   };
   return obj;
 }
@@ -317,8 +320,7 @@ function addTr()
 */
 function halfTree(n)
 {
-  let char="*";
-  for(let i=1; i<=n; i++) console.log(char.repeat(i));
+  for(let i=1; i<=n; i++) console.log("*".repeat(i));
 }
 
 /* ESERCIZIO 28
@@ -332,16 +334,31 @@ function halfTree(n)
   *****
 
 */
-function fullTree(n)
+function tree(n)
 {
-  let char="*";
-  for(let i=1; i<=n; i++) console.log(char.repeat(i));
+  for(let i=1; i<=n; i++) console.log(" ".repeat(n-i)+"*".repeat(i+i-1));
 }
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
+function isItPrime(n)
+{
+  let prime=true;
+  if(n>0 && Number.isInteger(n)==true)
+  {
+    for(let i=2; i<n; i++)
+    {
+      if(n%i==0)
+      {
+        prime=false;
+        break;
+      }
+    }
+  }
+  else prime=false;
+  return prime;
+}
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 const movies = [
@@ -458,6 +475,4 @@ const movies = [
     Poster:
       'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
   },
-]
-
-console.log();
+];
