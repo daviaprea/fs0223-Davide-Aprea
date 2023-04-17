@@ -1,0 +1,84 @@
+body{
+    background: rgb(0,129,136);
+    background: linear-gradient(0deg, rgba(0,129,136,1) 0%, rgba(84,198,214,1) 45%, rgba(120,234,235,1) 100%);
+    font-family: 'Jost', sans-serif;
+}
+
+#mainDiv{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h1, input, ul{
+    margin: 15px 0;
+}
+
+#inpTask, #addTask{
+    height: 2rem;
+    box-sizing: border-box;
+}
+
+#inpTask{
+    border: 1px solid rgb(211, 211, 211);
+    padding: 0 10px;
+    border-radius: 3px;
+    width: 80%;
+}
+
+#addTask{
+    width: 2rem;
+    background-color: #904EEE;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+}
+
+#inpTask::placeholder{
+    font-family: 'Jost', sans-serif;
+}
+
+#todoList{
+    list-style-position: inside;
+    text-align: left;
+}
+
+#todoList li{
+    padding: 10px;
+    background-color: rgb(233, 233, 233);
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: scale 0.3s;
+}
+
+#todoList li:hover{
+    background-color: rgb(204, 204, 204);
+    scale: 1.03;
+    cursor: pointer;
+}
+
+#todoList li i{
+    height: 100%;
+    color: white;
+}
+
+#todoList li button{
+    background-color: red;
+    border: 0;
+    border-radius: 3px;
+}
