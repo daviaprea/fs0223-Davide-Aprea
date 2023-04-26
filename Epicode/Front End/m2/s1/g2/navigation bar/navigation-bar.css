@@ -51,8 +51,21 @@ h4{
         margin: 10px 0;
     }
 
-    #logo{
+    #first-c, #last-c{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #first-c li, #last-c li{
+        width: 42%;
+        text-align: center;
+    }
+
+    #shop{
         order: 1;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
     }
 
     #first-c{

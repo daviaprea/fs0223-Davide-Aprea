@@ -32,10 +32,48 @@ h2{
     }
 }
 
-@media screen and (min-width: 768px){
-    .body{
+@media screen and (min-width: 1100px){
+    body{
         display: flex;
     }
-
     
+    header{
+        flex: 1;
+    }
+
+    main{
+        flex: 4;
+    }
+
+    nav{
+        height: 100vh;
+        position: fixed;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    #first-c{
+        order: 2;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #last-c{
+        order: 3;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li{
+        width: 100%;
+        box-sizing: border-box;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .art{
+        flex-direction: column-reverse;
+    }
 }
