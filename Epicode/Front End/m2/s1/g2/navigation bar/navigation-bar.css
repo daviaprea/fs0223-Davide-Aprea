@@ -1,0 +1,65 @@
+nav{
+    background-color: #FBF7E3;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#first-c, #last-c{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+nav li{
+    background-color: #F3DF85;
+    padding: 15px 10px;
+    border-radius: 40px;
+    font-size: 0.9em;
+}
+
+#logo{
+    height: 30px;
+}
+
+#shop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 0.1;
+}
+
+h4{
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 576px){
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        margin: 10px 0;
+    }
+
+    #logo{
+        order: 1;
+    }
+
+    #first-c{
+        order: 2;
+    }
+
+    #last-c{
+        order: 3;
+    }
+}

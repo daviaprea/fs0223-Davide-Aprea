@@ -1,0 +1,35 @@
+#art-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+img{
+    height: 250px;
+}
+
+.art{
+    display: flex;
+    background-color: #FBF7E3;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.art-text{
+    padding: 15px;
+}
+
+@media screen and (max-width: 750px){
+    .art{
+        flex-direction: column-reverse;
+    }
+
+    .art-text{
+        padding: 15px 0;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
