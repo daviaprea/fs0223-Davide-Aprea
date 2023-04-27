@@ -8,3 +8,85 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+body{
+    font-family: 'Bree Serif', serif;
+}
+
+#testoAlternato{
+    border: 2px solid gray;
+    padding: 15px;
+    font-size: 1.5em;
+    position: relative;
+}
+
+span i{
+    color: #6B879C;
+    position: absolute;
+}
+
+#first{
+    animation: cascade1 3s ease-in-out infinite;
+}
+
+#second{
+    animation: cascade2 3s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+#third{
+    animation: cascade3 3s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+@keyframes cascade1 {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+@keyframes cascade2 {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+@keyframes cascade3 {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
