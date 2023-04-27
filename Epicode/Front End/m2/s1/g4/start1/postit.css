@@ -1,0 +1,52 @@
+body{
+    background-color: #666666;
+    font-family: 'Indie Flower', cursive;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 3em;
+}
+
+p{
+    font-size: 2em;
+}
+
+.lavagna{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.postit{
+    width: 250px;
+    height: 225px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.postit:hover{
+    transform: scale(1.2) rotate(0);
+}
+
+.yellow{
+    background: rgb(179,180,34);
+    background: linear-gradient(0deg, rgba(179,180,34,1) 0%, rgba(250,255,175,1) 100%);
+    transform: rotate(-5deg);
+}
+
+.lilla{
+    background: rgb(138,140,153);
+    background: linear-gradient(0deg, rgba(138,140,153,1) 0%, rgba(203,202,246,1) 100%);
+    transform: rotate(-15deg);
+}
+
+.green{
+    background: rgb(158,182,160);
+    background: linear-gradient(0deg, rgba(158,182,160,1) 0%, rgba(202,252,203,1) 100%);
+    transform: rotate(10deg);
+}
