@@ -53,35 +53,35 @@ p{
 }
 
 .first{
-    animation: attach 0.5s ease-in;
+    animation: attach 0.5s ease-in 0.1s backwards;
 }
 
 .sec{
-    animation: attach 0.5s ease-in 0.5s;
+    animation: attach 0.5s ease-in 0.5s backwards;
 }
 
 .third{
-    animation: attach 0.5s ease-in 1s;
+    animation: attach 0.5s ease-in 1s backwards;
 }
 
 .fourth{
-    animation: attach 0.5s ease-in 1.5s;
+    animation: attach 0.5s ease-in 1.5s backwards;
 }
 
 .fifth{
-    animation: attach 0.5s ease-in 2s;
+    animation: attach 0.5s ease-in 2s backwards;
 }
 
 .sixth{
-    animation: attach 0.5s ease-in 2.5s;
+    animation: attach 0.5s ease-in 2.5s backwards;
 }
 
 .sev{
-    animation: attach 0.5s ease-in 3s;
+    animation: attach 0.5s ease-in 3s backwards;
 }
 
 .eight{
-    animation: attach 0.5s ease-in 3.5s;
+    animation: attach 0.5s ease-in 3.5s backwards;
 }
 
 @keyframes attach {
