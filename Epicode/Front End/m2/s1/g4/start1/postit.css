@@ -30,7 +30,8 @@ p{
 }
 
 .postit:hover{
-    transform: scale(1.2) rotate(0);
+    transform: scale(1.2);
+    rotate: (0);
 }
 
 .yellow{
@@ -49,4 +50,50 @@ p{
     background: rgb(158,182,160);
     background: linear-gradient(0deg, rgba(158,182,160,1) 0%, rgba(202,252,203,1) 100%);
     transform: rotate(10deg);
+}
+
+.first{
+    animation: attach 0.5s ease-in;
+}
+
+.sec{
+    animation: attach 0.5s ease-in 0.5s;
+}
+
+.third{
+    animation: attach 0.5s ease-in 1s;
+}
+
+.fourth{
+    animation: attach 0.5s ease-in 1.5s;
+}
+
+.fifth{
+    animation: attach 0.5s ease-in 2s;
+}
+
+.sixth{
+    animation: attach 0.5s ease-in 2.5s;
+}
+
+.sev{
+    animation: attach 0.5s ease-in 3s;
+}
+
+.eight{
+    animation: attach 0.5s ease-in 3.5s;
+}
+
+@keyframes attach {
+    0%{
+        opacity: 0;
+        transform: scale(5, 5);
+        z-index: 1;
+    }
+
+    100%{
+        transform: scale(1, 1);
+        opacity: 1;
+        z-index: 1;
+    }
 }
