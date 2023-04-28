@@ -25,19 +25,19 @@ span i{
 }
 
 #first{
-    animation: cascade1 3s ease-in-out infinite;
+    animation: cascade1 6s ease-in-out infinite;
 }
 
 #second{
-    animation: cascade2 3s ease-in-out infinite;
+    animation: cascade2 6s ease-in-out infinite;
     opacity: 0;
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 
 #third{
-    animation: cascade3 3s ease-in-out infinite;
+    animation: cascade3 6s ease-in-out infinite;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 @keyframes cascade1 {
