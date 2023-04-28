@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 /*HEADER*/
 nav{
     padding: 20px 60px;
@@ -6,6 +10,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav ul{
@@ -23,8 +30,30 @@ nav ul li{
     position: relative;
 }
 
+.headings button{
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    font-size: 1.2em;
+    padding: 7px 35px;
+}
+
+nav a{
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    font-size: 1.2em;
+    padding: 7px 15px;
+}
+
 h1{
     font-size: 6em;
+    margin-bottom: 20px;
+}
+
+header h2{
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 #m-svg{
@@ -46,6 +75,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: flex-start;
 }
 
 #trend>div{
@@ -62,6 +92,8 @@ h1{
 .art{
     display: flex;
     flex-grow: 1;
+    width: 300px;
+    gap: 10px;
 }
 
 .art h4{
@@ -76,14 +108,10 @@ h1{
     font-size: 1.3em;
 }
 
-.art-body{
-    margin-top: 5px;
-    margin-left: 20px;
-}
-
 .art-h{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .art img{
@@ -118,6 +146,18 @@ h1{
 
 .art-aside{
     padding: 20px 60px;
+    display: flex;
+    gap: 6em;
+}
+
+#var-art{
+    flex: 2;
+}
+
+aside{
+    flex: 1;
+    position: sticky;
+    top: 30px;
 }
 
 .art-footer{
@@ -136,9 +176,52 @@ h1{
     gap: 15px;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0;
+    margin-bottom: 30px;
+}
+
+.art-list>div{
+    flex: 1;
 }
 
 .art-aside-img{
     height: 130px;
+}
+
+.art-time a{
+    color: gray;
+    background-color: rgb(228, 228, 228);
+    padding: 5px;
+    border-radius: 25px;
+}
+
+/*ASIDE*/
+aside h3{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+aside a{
+    color: gray;
+    padding: 5px 8px;
+}
+
+.topic{
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 3px;
+}
+
+.topic-cont{
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding-bottom: 25px;
+}
+
+.info-cont{
+    padding-top: 25px;
+}
+
+.topic-cont, .info-cont{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
