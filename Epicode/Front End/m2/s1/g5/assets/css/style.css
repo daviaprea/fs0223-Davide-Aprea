@@ -1,8 +1,25 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 a{
     text-decoration: none;
 }
 
 /*HEADER*/
+header{
+    background-color: #FFC017;
+    position: relative;
+    padding: 100px 60px;
+}
+
+.svg-cont{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 nav{
     padding: 20px 60px;
     background-color: #FFC017;
@@ -13,21 +30,22 @@ nav{
     position: sticky;
     top: 0;
     z-index: 1;
+    gap: 20px;
 }
 
 nav ul{
     display: flex;
     list-style-type: none;
-}
-
-nav ul li{
-    margin: 0 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .headings{
-    padding: 90px 60px;
-    background-color: #FFC017;
-    position: relative;
+    /*padding: 100px 60px;*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .headings button{
@@ -44,28 +62,16 @@ nav a{
     border-radius: 40px;
     font-size: 1.2em;
     padding: 7px 15px;
+    display: block;
 }
 
 h1{
     font-size: 6em;
-    margin-bottom: 20px;
+    font-family: 'Spectral', serif;
 }
 
 header h2{
     font-size: 2em;
-    margin-bottom: 20px;
-}
-
-#m-svg{
-    width: 100% !important;
-    height: 100% !important;
-}
-
-#svg-cont{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%
 }
 
 /*MAIN*/
@@ -78,7 +84,7 @@ header h2{
     align-items: flex-start;
 }
 
-#trend>div{
+#header-trend{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -92,8 +98,11 @@ header h2{
 .art{
     display: flex;
     flex-grow: 1;
-    width: 300px;
     gap: 10px;
+}
+
+.dim{
+    width: 300px;
 }
 
 .art h4{
@@ -154,12 +163,6 @@ header h2{
     flex: 2;
 }
 
-aside{
-    flex: 1;
-    position: sticky;
-    top: 30px;
-}
-
 .art-footer{
     display: flex;
     justify-content: space-between;
@@ -181,6 +184,7 @@ aside{
 
 .art-list>div{
     flex: 1;
+    min-width: 50px;
 }
 
 .art-aside-img{
@@ -195,6 +199,12 @@ aside{
 }
 
 /*ASIDE*/
+aside{
+    flex: 1;
+    position: sticky;
+    top: 30px;
+}
+
 aside h3{
     font-weight: bold;
     font-size: 1.2em;
@@ -224,4 +234,66 @@ aside a{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 903px){
+    .art-aside{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    aside{
+        position: static;
+    }
+
+    #svg-cont{
+        right: -250px;
+    }
+
+}
+
+@media screen and (max-width: 552px){
+    #m-svg{
+        display: none;
+    }
+
+    nav ul li:not(#start, #sign){
+        display: none;
+    }
+
+    .art-aside-img{
+        height: 90px;
+    }
+
+    header{
+        padding: 100px 10px;
+    }
+
+    header .svg-cont{
+        display: none;
+    }
+
+    h1{
+        font-size: 5em;
+    }
+
+    .art-aside, nav, #trend{
+        padding: 20px 10px;
+    }
+
+    .art-list h3{
+        font-size: 1.2em;
+    }
+
+    .art-list p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 0.9em;
+    }
+
+    .art-time{
+        font-size: 0.6em;
+    }
 }
