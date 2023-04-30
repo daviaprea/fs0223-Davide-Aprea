@@ -4212,6 +4212,14 @@
             </aside>
         </div>
     </main>
+
+    <script>
+        window.onscroll = ()=> {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) document.querySelector("nav").style.backgroundColor="white";
+
+            else document.querySelector("nav").style.backgroundColor="#FFC017";
+        };
+    </script>
 </body>
 
 </html>

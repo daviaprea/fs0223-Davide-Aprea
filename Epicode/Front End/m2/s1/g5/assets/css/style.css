@@ -31,6 +31,7 @@ nav{
     top: 0;
     z-index: 1;
     gap: 20px;
+    transition: background-color 0.8s ease;
 }
 
 nav ul{
@@ -202,7 +203,8 @@ header h2{
 aside{
     flex: 1;
     position: sticky;
-    top: 30px;
+    top: 90px;
+    align-self: flex-start;
 }
 
 aside h3{
@@ -241,10 +243,12 @@ aside a{
     .art-aside{
         flex-direction: column-reverse;
         justify-content: flex-start;
+        gap: 2em;
     }
 
     aside{
         position: static;
+        align-self: stretch;
     }
 
     #svg-cont{
