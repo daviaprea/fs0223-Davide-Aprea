@@ -4214,6 +4214,16 @@
     </main>
 
     <script>
+        let m=document.querySelectorAll("g g g path");
+        let svgAnim=setInterval(showHide, 50);
+
+        function showHide()
+        {
+            let randIndex=Math.floor(Math.random() * m.length);
+            if(m[randIndex].style.display=="none") m[randIndex].style.removeProperty("display");
+            else m[randIndex].style.display="none";
+        }
+
         window.onscroll = ()=> {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) document.querySelector("nav").style.backgroundColor="white";
 
