@@ -1,0 +1,10 @@
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+$font-sizes: (1: 1rem, 2: 2rem, 3: 3rem, 4: 3.5rem, 5: 4rem);
+@each $id, $size in $font-sizes{
+    .fs-#{$id}{
+        font-size: $size;
+    }
+}

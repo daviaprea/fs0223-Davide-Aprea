@@ -1,0 +1,101 @@
+body, ul, h2 {
+  margin: 0;
+}
+
+ul, button {
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+}
+
+.fs-1 {
+  font-size: 1rem;
+}
+
+.fs-2 {
+  font-size: 2rem;
+}
+
+.fs-3 {
+  font-size: 3rem;
+}
+
+.fs-4 {
+  font-size: 3.5rem;
+}
+
+.fs-5 {
+  font-size: 4rem;
+}
+
+.padding-sm {
+  padding: 0.3rem;
+}
+
+.margin-sm {
+  margin: 0.3rem;
+}
+
+.padding-normal {
+  padding: 0.5rem;
+}
+
+.margin-normal {
+  margin: 0.5rem;
+}
+
+.padding-md {
+  padding: 0.7rem;
+}
+
+.margin-md {
+  margin: 0.7rem;
+}
+
+.padding-lg {
+  padding: 0.9rem;
+}
+
+.margin-lg {
+  margin: 0.9rem;
+}
+
+.padding-xl {
+  padding: 1.1rem;
+}
+
+.margin-xl {
+  margin: 1.1rem;
+}
+
+.padding-xxl {
+  padding: 1.3rem;
+}
+
+.margin-xxl {
+  margin: 1.3rem;
+}
+
+header {
+  background-color: #640fc5;
+  color: #f4f4f4;
+}
+
+.btn-blue {
+  background-color: #0e6cff;
+}
+
+.btn-orange {
+  background-color: #ff8700;
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+
+header button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */
