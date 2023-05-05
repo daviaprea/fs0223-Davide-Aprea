@@ -85,17 +85,31 @@ header {
 
 .btn-blue {
   background-color: #0e6cff;
+  color: #f4f4f4;
 }
 
 .btn-orange {
   background-color: #ff8700;
+  color: #f4f4f4;
 }
 
 .btn-green {
   background-color: #4caf50;
+  color: #f4f4f4;
 }
 
 header button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+
+.img-grid img {
+    width: 200px;
+    flex: 1;
+}/*# sourceMappingURL=style.css.map */ 

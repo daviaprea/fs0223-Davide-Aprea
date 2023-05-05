@@ -1,0 +1,11 @@
+body{
+    background-color: #141414;
+}
+
+main section{
+    overflow-x: hidden;
+}
+
+#logo{
+    height: 3rem;
+}
