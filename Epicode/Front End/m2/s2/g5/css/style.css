@@ -6,6 +6,6 @@ main section{
     overflow-x: hidden;
 }
 
-#logo{
+#logo, #avatar{
     height: 3rem;
 }
