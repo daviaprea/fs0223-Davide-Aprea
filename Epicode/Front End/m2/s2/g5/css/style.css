@@ -2,10 +2,49 @@ body{
     background-color: #141414;
 }
 
-main section{
+main section .row{
     overflow-x: hidden;
+}
+
+main section img{
+    height: 150px;
 }
 
 #logo, #avatar{
     height: 3rem;
+}
+
+nav select{
+    display: none;
+    background-color: transparent;
+    color: white;
+}
+
+nav select option{
+    background-color: rgb(31, 31, 31);
+}
+
+nav select option:hover{
+    background-color: whitesmoke;
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.row:hover{
+    cursor: grab;
+}
+
+@media screen and (max-width: 760px){
+    nav select{
+        display: inline;
+    }
+
+    nav ul, .kids, i.fa-bell{
+        display: none;
+    }
 }
