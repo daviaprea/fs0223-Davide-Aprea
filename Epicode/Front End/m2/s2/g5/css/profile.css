@@ -31,6 +31,7 @@
 .hover-btn{
     transition: all 250ms;
     letter-spacing: 2px;
+    border-radius: 2px;
 }
 
 .hover-btn:hover{
@@ -51,4 +52,14 @@
     padding: 3px;
     background-color: black;
     font-size: 0.5rem;
+}
+
+main .row input{
+    background-color: #666666;
+    border-radius: 1px;
+}
+
+.maturity-btn{
+    background-color: #333333;
+    padding: 5px 10px;
 }

@@ -3,12 +3,19 @@ body{
 }
 
 main section .row{
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
 }
 
 main section img{
     height: 150px;
+    transition: scale 250ms;
+    position: relative;
+}
+
+main section img:hover{
+    scale: 1.05;
+    z-index: 1;
 }
 
 #logo, #avatar{
@@ -45,19 +52,20 @@ section .container-fluid i{
     font-size: 3rem;
     cursor: pointer;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 50%;
+    transition: transform 250ms;
 }
 
 section .container-fluid i:hover{
-    background-color: #14141471;
+    transform: scale(1.1);
 }
 
-#left-arr{
+.left-arr{
     left: 0;
 }
 
-#right-arr{
+.right-arr{
     right: 0;
 }
 

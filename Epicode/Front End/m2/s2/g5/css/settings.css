@@ -18,3 +18,12 @@ header{
 p, h3, .div-m{
     margin: 5px 0;
 }
+
+.cancel-member{
+    border: 0;
+    padding: 5px 20px;
+    background: rgb(208,208,208);
+    background: linear-gradient(0deg, rgba(208,208,208,1) 0%, rgba(241,241,241,1) 100%);
+    font-weight: bold;
+    border-radius: 3px;
+}
