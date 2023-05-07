@@ -23,7 +23,7 @@
                     <li><a class="text-white text-opacity-75 text-decoration-none" href="#">My List</a></li>
                 </ul>
 
-                <div class="dropdown">
+                <div class="dropdown section-drop">
                     <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Home
                     </button>
@@ -37,7 +37,7 @@
                 </div>
             </div>
                 
-            <div class="text-white d-flex align-items-center gap-3">
+            <div class="text-white d-flex align-items-center gap-1 gap-md-3">
                 <i class="fas fa-search"></i>
                 <a class="text-white text-opacity-75 text-decoration-none kids" href="#">Kids</a>
                 <i class="fas fa-bell"></i>
@@ -48,7 +48,7 @@
                     </button>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="profile.html">Account</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="settings.html">Settings</a></li>
                       <li><a class="dropdown-item" href="#">Log out</a></li>
                     </ul>
                 </div>
@@ -74,8 +74,9 @@
             </div>
         </div>
         <section>
-            <div class="container-fluid mb-5">
+            <div class="container-fluid mb-5 position-relative">
                 <h3 class="text-white mb-3">Trending Now</h3>
+                <i class="fas fa-angle-left" id="left-arr"></i>
                 <div class="row flex-nowrap">
                     <div class="col"><img draggable="false" src="Netflix-assets/assets/media/media0.webp" alt=""></div>
                     <div class="col"><img draggable="false" src="Netflix-assets/assets/media/media1.jpg" alt=""></div>
@@ -87,6 +88,7 @@
                     <div class="col"><img draggable="false" src="Netflix-assets/assets/media/media7.webp" alt=""></div>
                     <div class="col"><img draggable="false" src="Netflix-assets/assets/media/media8.webp" alt=""></div>
                 </div>
+                <i class="fas fa-angle-right" id="right-arr"></i>
             </div>
         </section>
         <section>
@@ -134,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="row row mb-3">
+            <div class="row row-cols-2 row-cols-md-4 mb-3">
                 <div class="col d-flex flex-column">
                     <a href="#" class="text-decoration-none text-white-50">Audio and Subtitles</a>
                     <a href="#" class="text-decoration-none text-white-50">Media Center</a>

@@ -4,6 +4,7 @@ body{
 
 main section .row{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 main section img{
@@ -14,7 +15,7 @@ main section img{
     height: 3rem;
 }
 
-nav select{
+.section-drop{
     display: none;
     background-color: transparent;
     color: white;
@@ -35,16 +36,44 @@ nav ul{
     gap: 1rem;
 }
 
-.row:hover{
+section .row:hover{
     cursor: grab;
 }
 
+section .container-fluid i{
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+}
+
+section .container-fluid i:hover{
+    background-color: #14141471;
+}
+
+#left-arr{
+    left: 0;
+}
+
+#right-arr{
+    right: 0;
+}
+
 @media screen and (max-width: 760px){
-    nav select{
+    .section-drop{
         display: inline;
     }
 
     nav ul, .kids, i.fa-bell{
         display: none;
+    }
+}
+
+@media screen and (max-width: 385px){
+    footer a{
+        margin: 5px 0;
+        font-size: 0.8rem;
     }
 }

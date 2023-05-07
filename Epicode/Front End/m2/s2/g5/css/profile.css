@@ -38,6 +38,10 @@
     color: black !important;
 }
 
+.last-btn:hover{
+    letter-spacing: 5px;
+}
+
 .prof-pic{
     bottom: 25px;
     left: 20px;
