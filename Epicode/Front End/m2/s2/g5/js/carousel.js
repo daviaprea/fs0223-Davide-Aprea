@@ -10,7 +10,7 @@ arrowBtn.forEach((btn, i) => {
     });
 });
 
-let dragStop=()=>{
+/*let dragStop=()=>{
     isDragging=false;
 }
 
@@ -27,4 +27,4 @@ row.forEach(r=>{
     });
 });
 
-document.addEventListener("mouseup", dragStop);
+document.addEventListener("mouseup", dragStop);*/

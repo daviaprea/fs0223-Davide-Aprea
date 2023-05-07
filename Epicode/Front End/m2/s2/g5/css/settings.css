@@ -27,3 +27,25 @@ p, h3, .div-m{
     font-weight: bold;
     border-radius: 3px;
 }
+
+.ch-credentials{
+    text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .col-12{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 365px){
+    .member, .ch-credentials{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .credentials{
+        border: 0 !important;
+        width: 100%;
+    }
+}

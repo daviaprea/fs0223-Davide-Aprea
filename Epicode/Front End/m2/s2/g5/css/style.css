@@ -43,10 +43,6 @@ nav ul{
     gap: 1rem;
 }
 
-section .row:hover{
-    cursor: grab;
-}
-
 section .container-fluid i{
     color: white;
     font-size: 3rem;
