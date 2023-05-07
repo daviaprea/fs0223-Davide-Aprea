@@ -1,33 +1,30 @@
-let row = document.querySelector("section .row");
+let row = document.querySelectorAll("section .row");
 let arrowBtn=document.querySelectorAll("section .container-fluid i");
-let firstCardWidth = row.querySelector(".col").offsetWidth;
-let rowChildren=[...row.children];
+let firstCardWidth = document.querySelector("section .row .col").offsetWidth;
+//let rowChildren=[...row.children];
 let isDragging=false, startX, startScrollLeft;
 
-console.log(arrowBtn);
-
-arrowBtn.forEach(btn => {
+arrowBtn.forEach((btn, i) => {
     btn.addEventListener("click", ()=>{
-        console.log(btn.classList[2]);
-        row.scrollLeft += btn.classList[2]=="left-arr" ? -firstCardWidth : firstCardWidth;
+        row[Math.floor(i/2)].scrollLeft += btn.classList[2]=="left-arr" ? -firstCardWidth : firstCardWidth;
     });
 });
-
-let dragStart=(e)=>{
-    isDragging=true;
-    startX=e.pageX;
-    startScrollLeft=row.scrollLeft;
-}
-
-let dragging=(e)=>{
-    if(!isDragging) return;
-    row.scrollLeft = startScrollLeft-(e.pageX-startX);
-}
 
 let dragStop=()=>{
     isDragging=false;
 }
 
-row.addEventListener("mousedown", dragStart);
-row.addEventListener("mousemove", dragging);
+row.forEach(r=>{
+    r.addEventListener("mousedown", (e)=>{
+        isDragging=true;
+        startX=e.pageX;
+        startScrollLeft=r.scrollLeft;
+    });
+
+    r.addEventListener("mousemove", (e)=>{
+        if(!isDragging) return;
+        r.scrollLeft = startScrollLeft-(e.pageX-startX);
+    });
+});
+
 document.addEventListener("mouseup", dragStop);
