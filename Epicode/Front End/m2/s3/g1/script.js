@@ -41,7 +41,7 @@ document.querySelector("form").addEventListener("submit", (e)=>{
     let breed=document.getElementById("breed");
     let listCont=document.getElementById("pet-list");
 
-    if(petArr.length==0)
+    if(listCont.innerHTML=="")
     {
         let list=document.createElement("ul");
         listCont.appendChild(list);
@@ -53,13 +53,18 @@ document.querySelector("form").addEventListener("submit", (e)=>{
 
     else
     {
+        let sharedOwner="";
+        for(let p of petArr)
+        {
+            if (p["ownerName"]==owner.value) sharedOwner=" Owner shared with "+p["petName"];
+        }
+
         let listItem=document.createElement("li");
-        listItem.innerText="Pet name: "+name.value+"; Owner name: "+owner.value+"; Species: "+species.value+"; Breed: "+breed.value+";";
+        listItem.innerText="Pet name: "+name.value+"; Owner name: "+owner.value+"; Species: "+species.value+"; Breed: "+breed.value+";"+sharedOwner;
         listCont.querySelector("ul").appendChild(listItem);
     }
-
-    petArr.push(new Pet(name.value, owner.value, species.value, breed.value));
     
+    petArr.push(new Pet(name.value, owner.value, species.value, breed.value));
     name.value="";
     owner.value="";
     species.value="";
