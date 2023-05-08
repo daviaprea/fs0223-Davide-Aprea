@@ -1,3 +1,5 @@
+/*SE IL CAROSELLO NON SI SPOSTA DI UN FILM ALLA VOLTA, AGGIORNARE LA PAGINA*/
+
 let row = document.querySelectorAll("section .row");
 let arrowBtn=document.querySelectorAll("section .container-fluid i");
 let firstCardWidth = document.querySelector("section .row .col").offsetWidth;
@@ -10,21 +12,18 @@ arrowBtn.forEach((btn, i) => {
     });
 });
 
-/*let dragStop=()=>{
-    isDragging=false;
-}
+/*arrowBtn.forEach((btn, i) => {
+    btn.addEventListener("click", ()=>{
+        if(btn.classList[2]=="left-arr")
+        {
+            row[Math.floor(i/2)].scrollLeft += -firstCardWidth;
+            row.unshift(row.pop());
+        }
 
-row.forEach(r=>{
-    r.addEventListener("mousedown", (e)=>{
-        isDragging=true;
-        startX=e.pageX;
-        startScrollLeft=r.scrollLeft;
+        else
+        {
+            row[Math.floor(i/2)].scrollLeft += firstCardWidth;
+            row.push(row.shift());
+        }
     });
-
-    r.addEventListener("mousemove", (e)=>{
-        if(!isDragging) return;
-        r.scrollLeft = startScrollLeft-(e.pageX-startX);
-    });
-});
-
-document.addEventListener("mouseup", dragStop);*/
+});*/
