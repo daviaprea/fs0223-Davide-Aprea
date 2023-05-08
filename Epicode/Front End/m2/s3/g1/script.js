@@ -25,9 +25,9 @@ class Pet{
         this.species=species;
         this.breed=breed;
     }
-    sameOwner(otherPet)
+    sameOwner(otherPetOwner)
     {
-        return otherPet["ownerName"]==this.ownerName;
+        return this.ownerName==otherPetOwner;
     }
 }
 
@@ -54,10 +54,7 @@ document.querySelector("form").addEventListener("submit", (e)=>{
     else
     {
         let sharedOwner="";
-        for(let p of petArr)
-        {
-            if (p["ownerName"]==owner.value) sharedOwner=" Owner shared with "+p["petName"];
-        }
+        for(let p of petArr) if (p.sameOwner(owner.value)==true) sharedOwner=" Owner shared with "+p["petName"];
 
         let listItem=document.createElement("li");
         listItem.innerText="Pet name: "+name.value+"; Owner name: "+owner.value+"; Species: "+species.value+"; Breed: "+breed.value+";"+sharedOwner;
