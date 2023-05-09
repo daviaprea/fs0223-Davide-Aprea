@@ -16,15 +16,6 @@ document.getElementById("remove").addEventListener("click", ()=>{
     }
 });
 
-/*let spanTimer=document.getElementById("timer");
-sessionStorage.setItem("time", "0");
-setInterval(()=>{
-    let time=Number(sessionStorage.getItem("time"));
-    spanTimer.innerText=`${time}s`;
-    time++;
-    sessionStorage.setItem("time", `${time}`);
-}, 1000);*/
-
 let spanTimer=document.getElementById("timer");
 
 setInterval(()=>{
