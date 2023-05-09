@@ -12,25 +12,20 @@ let isDragging=false, startX, startScrollLeft;
     });
 });*/
 
-row.forEach(r=>rowChildren.push([...r.children]));
-
-console.log(rowChildren[0][0]);
-
 arrowBtn.forEach((btn, i) => {
     btn.addEventListener("click", ()=>{
+
         if(btn.classList[2]=="left-arr")
         {
-            //rowChildren[Math.floor(i/2)].unshift(rowChildren[Math.floor(i/2)].pop());
-
             row[Math.floor(i/2)].scrollLeft += -firstCardWidth;
+            /*row[Math.floor(i/2)].prepend(row[Math.floor(i/2)].children[row[Math.floor(i/2)].children.length-1]);*/
         }
 
         else
         {
-            //rowChildren[Math.floor(i/2)].push(rowChildren[Math.floor(i/2)].shift());
-
             row[Math.floor(i/2)].scrollLeft += firstCardWidth;
-            row[Math.floor(i/2)].appendChild(rowChildren[0]);
+            console.log(row[Math.floor(i/2)].children[0])
+            row[Math.floor(i/2)].appendChild(row[Math.floor(i/2)].children[0]);
         }
     });
 });
