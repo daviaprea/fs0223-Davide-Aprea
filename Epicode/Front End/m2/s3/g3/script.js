@@ -6,6 +6,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
 .then(data=>{
     //console.log(data)
     let row=document.querySelector(".row");
+    let totPrice=0;
     data.forEach((book, i) => {
         let bookTemp=document.getElementById("bookCards");
         let bookCard=bookTemp.content.cloneNode(true);
@@ -15,23 +16,28 @@ fetch("https://striveschool-api.herokuapp.com/books")
         bookCard.querySelector(".card-text").innerText=book.price;
         bookCard.querySelector(".card-text").innerText=book.price;
 
-        bookCard.querySelector(".btn-danger").addEventListener("click",()=>{
-            console.log(row.querySelectorAll(".col")[i]);
-            //row.querySelectorAll(".col")[i].remove();
-        });
+        bookCard.querySelector(".del").addEventListener("click", (e)=> /*btn.closest(".col").remove()*/ e.currentTarget.closest(".col").remove());
 
-        bookCard.querySelector(".buy").addEventListener("click", ()=>{
+        bookCard.querySelector(".buy").addEventListener("click", (e)=>{
             let listItem=document.createElement("li");
-            let price=row.querySelectorAll(".col .card-text")[i].innerText;
+            listItem.classList.add("dropdown-item");
+            let price=e.currentTarget.parentElement.querySelector(".col .card-text").innerText;
+            let title=e.currentTarget.parentElement.querySelector(".col .card-title").innerText;
             let tot=document.getElementById("tot");
 
-            listItem.innerHTML=`<li class="dropdown-item">${row.querySelectorAll(".col .card-title")[i].innerText} - ${price}$ <i class="far fa-trash-alt"></li>`;
+            listItem.innerHTML=`<span>${title}</span> - <span class="moviePrice">${price}</span>$`;
             document.querySelector("nav .dropdown-menu").appendChild(listItem);
 
             tot.innerText=Number(tot.innerText)+Number(price);
 
-            let trash=document.querySelectorAll("nav .dropdown-menu i")[i];
-            console.log(trash);
+            let trashBtn=document.createElement("button");
+            trashBtn.innerHTML='<i class="far fa-trash-alt">';
+            listItem.appendChild(trashBtn);
+
+            trashBtn.addEventListener("click", (e)=>{
+                tot.innerText=Number(tot.innerText)-Number(e.currentTarget.parentElement.children[1].innerText);
+                e.currentTarget.closest(".dropdown-item").remove()
+            });
         });
 
         row.appendChild(bookCard);

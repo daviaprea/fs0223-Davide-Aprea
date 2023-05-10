@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="mb-5 shadow-sm">
-        <nav>
+        <nav class="d-flex align-items-center">
             <div class="dropdown">
                 <button class="btn btn-warning border-0 dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-shopping-cart"></i>
@@ -18,7 +18,7 @@
                 <ul class="dropdown-menu">
                 </ul>
             </div>
-            <span id="tot"></span>
+            <p class="m-0">Totale carrello: <span id="tot">0</span>$</p>
         </nav>
     </header>
 
@@ -37,7 +37,7 @@
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text"></p>
-                  <button type="button" class="btn btn-danger">Scarta</button>
+                  <button type="button" class="btn btn-danger del">Scarta</button>
                   <button type="button" class="btn btn-primary buy">Compra</button>
                 </div>
               </div>
