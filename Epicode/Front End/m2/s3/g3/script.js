@@ -6,8 +6,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
 .then(data=>{
     //console.log(data)
     let row=document.querySelector(".row");
-    let totPrice=0;
-    data.forEach((book, i) => {
+    data.forEach(book => {
         let bookTemp=document.getElementById("bookCards");
         let bookCard=bookTemp.content.cloneNode(true);
 
@@ -23,9 +22,11 @@ fetch("https://striveschool-api.herokuapp.com/books")
             listItem.classList.add("dropdown-item");
             let price=e.currentTarget.parentElement.querySelector(".col .card-text").innerText;
             let title=e.currentTarget.parentElement.querySelector(".col .card-title").innerText;
+            let img=e.currentTarget.parentElement.parentElement.querySelector(".card-img-top").src;
+            console.log(img)
             let tot=document.getElementById("tot");
 
-            listItem.innerHTML=`<span>${title}</span> - <span class="moviePrice">${price}</span>$`;
+            listItem.innerHTML=`<img src="${img}"><span>${title}</span> - <span class="moviePrice">${price}</span>$`;
             document.querySelector("nav .dropdown-menu").appendChild(listItem);
 
             tot.innerText=Number(tot.innerText)+Number(price);
@@ -35,7 +36,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
             listItem.appendChild(trashBtn);
 
             trashBtn.addEventListener("click", (e)=>{
-                tot.innerText=Number(tot.innerText)-Number(e.currentTarget.parentElement.children[1].innerText);
+                tot.innerText=Number(tot.innerText)-Number(e.currentTarget.parentElement.children[2].innerText);
                 e.currentTarget.closest(".dropdown-item").remove()
             });
         });
