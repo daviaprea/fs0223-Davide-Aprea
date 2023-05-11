@@ -1,6 +1,10 @@
 let apiKey="TXAl4tsq0AH939vI13rKvpyMo7xSgfkSwtTUiEnLKjjvEI0zqABAVoL5";
 
 const delCard=(btn)=>btn.closest(".col").remove();
+const showModal=(btn)=>{
+  document.getElementById("modalBody").src=btn.closest(".card").firstElementChild.src;
+  document.getElementById("exampleModalLabel").innerHTML=btn.closest(".card-body").firstElementChild.innerHTML;
+};
 
 function searchImages(param)
 {
@@ -25,7 +29,7 @@ function searchImages(param)
                     <p class="card-text">Photographer: ${pic.photographer}</p>
                     <div class="d-flex justify-content-between align-items-center"></div>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#${pic.id}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" onclick="showModal(this)">
                           View
                         </button>
                         <button type="button" class="btn btn-sm btn-outline-secondary" onclick="delCard(this)">
