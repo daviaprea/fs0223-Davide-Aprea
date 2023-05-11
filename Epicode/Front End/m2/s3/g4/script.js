@@ -21,11 +21,11 @@ function searchImages(param)
                 <div class="card mb-4 shadow-sm">
                   <img class="card-img-top" src=${pic.src.portrait} alt="">
                   <div class="card-body">
-                    <h5 class="card-title">${pic.alt}</h5>
+                    <h5 class="card-title"><a text-decoration-none href="img-detail.html?imgId=${pic.id}">${pic.alt}</a></h5>
                     <p class="card-text">Photographer: ${pic.photographer}</p>
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center"></div>
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#${pic.id}">
                           View
                         </button>
                         <button type="button" class="btn btn-sm btn-outline-secondary" onclick="delCard(this)">
