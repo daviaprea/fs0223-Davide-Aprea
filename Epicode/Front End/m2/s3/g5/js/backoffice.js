@@ -8,13 +8,31 @@ let deleteItem = function(){
             "Authorization": "Bearer "+token
         }
     })
-    .then(res=>{if(res.ok) console.log("Dati eliminati")})
+    .then(res=>{
+        if(res.ok)
+        {
+            console.log("Dati eliminati");
+            document.getElementById("form").reset();
+            //new URLSearchParams(window.location.search).delete("idProd");
+        }
+    })
     .catch(err=>console.log("Errore "+err))
 }
 
+const showModal=()=>{
+    document.getElementById("modalTitle").innerHTML="Are you sure you want to delete this item?";
+    document.getElementById("modalBody").innerHTML=`
+    <h3 class="text-center">${document.getElementById("prodName").value}</h3>
+    <img class="img-fluid" src="${document.getElementById("prodImg").value}">`;
+        
+    document.getElementById("modalFooter").innerHTML=`<button type="button" class="btn btn-danger" onclick="deleteItem()" data-bs-dismiss="modal">Delete</button>`
+};
+
+document.getElementById("resBtn").addEventListener("click", ()=>document.getElementById("form").reset());
+
 if(prodId)
 {
-    document.getElementById("btn-section").innerHTML+=`<button type="button" class="btn btn-danger" onclick="deleteItem()">Delete product</button>`;
+    document.getElementById("btn-section").innerHTML+=`<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="showModal()">Delete product</button>`;
     document.getElementById("sub").innerHTML="Modify product";
     fetch("https://striveschool-api.herokuapp.com/api/product/"+prodId, {
         headers: {

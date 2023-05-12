@@ -20,32 +20,64 @@
         <div class="container">
             <form id="form">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <label for="prodName" class="form-label">Name</label>
                     <input required type="text" class="form-control" id="prodName" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Description</label>
+                    <label for="prodDesc" class="form-label">Description</label>
                     <input required type="text" class="form-control" id="prodDesc">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Brand</label>
+                    <label for="prodBrand" class="form-label">Brand</label>
                     <input required type="text" class="form-control" id="prodBrand">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Image URL</label>
+                    <label for="prodImg" class="form-label">Image URL</label>
                     <input required type="text" class="form-control" id="prodImg">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Price</label>
+                    <label for="prodPrice" class="form-label">Price</label>
                     <input required type="number" class="form-control" id="prodPrice">
                 </div>
                 <div id="btn-section">
                     <button id="sub" type="submit" class="btn btn-primary">Add product</button>
-                    <button type="reset" class="btn btn-primary">Reset form</button>
+                    <button id="res" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resModal">Reset form</button>
                 </div>
             </form>
         </div>
     </main>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTitle"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-footer" id="modalFooter">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Form reset</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Are you sure you want to reset this form?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="resBtn">Reset form</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/backoffice.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
