@@ -1,5 +1,6 @@
 let token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVkZjc5MTg4Zjc0MDAwMTQyODc0M2YiLCJpYXQiOjE2ODM4Nzk4MjYsImV4cCI6MTY4NTA4OTQyNn0.6Cz0MsOo3NnH-nUfXTi6HAJKrsgwGAzFOVtRn2JfKwI";
-let prodId = new URLSearchParams(window.location.search).get('idProd');
+let addressBar = new URLSearchParams(window.location.search);
+let prodId = addressBar.get('idProd');
 
 let deleteItem = function(){
     fetch("https://striveschool-api.herokuapp.com/api/product/"+prodId, {
@@ -11,9 +12,9 @@ let deleteItem = function(){
     .then(res=>{
         if(res.ok)
         {
-            console.log("Dati eliminati");
+            document.getElementById("actionResult").innerHTML="Product deleted successfully.";
             document.getElementById("form").reset();
-            //new URLSearchParams(window.location.search).delete("idProd");
+            location.assign("index.html");
         }
     })
     .catch(err=>console.log("Errore "+err))
@@ -43,6 +44,7 @@ if(prodId)
         if(res.ok) return res.json();
     })
     .then(data=>{
+        document.getElementById("actionTitle").innerHTML="Edit product";
         document.getElementById("prodName").value=data.name;
         document.getElementById("prodDesc").value=data.description;
         document.getElementById("prodBrand").value=data.brand;
@@ -51,7 +53,11 @@ if(prodId)
     })
 }
 
-else prodId="";
+else
+{
+    prodId="";
+    document.getElementById("actionTitle").innerHTML="Add product";
+}
 
 document.getElementById("form").addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -77,7 +83,12 @@ document.getElementById("form").addEventListener("submit", (e)=>{
         }
     })
     .then(res=>{
-        if(res.ok) console.log("Dati inviati")
+        if(res.ok)
+        {
+            console.log("Dati inviati")
+            if(!prodId) document.getElementById("form").reset();
+            document.getElementById("actionResult").innerHTML="Task completed successfully.";
+        }
         else console.log("Errore")
     })
     .catch(err=>console.log("Errore "+err))

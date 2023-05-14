@@ -19,14 +19,15 @@ fetch("https://striveschool-api.herokuapp.com/api/product", {
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">${product.description}</p>
-                        <p class="card-text">Price: ${product.price}£</p>
+                        <p class="card-text">Price: ${product.price}€</p>
                         <div>
-                            <a href="backoffice.html?idProd=${product._id}" class="btn btn-primary">Modify</a>
+                            <a href="backoffice.html?idProd=${product._id}" class="btn btn-primary">Edit</a>
                             <a href="details.html?idProd=${product._id}" class="btn btn-danger">View more</a>
                         </div>
                     </div>
                 </div>
             </div>`;
     });
+    document.getElementById("spinner").style.display="none";
 })
 .catch(err=> console.log(err));
