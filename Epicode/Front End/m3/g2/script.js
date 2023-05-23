@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var _a, _b, _c;
 var SonAccount = /** @class */ (function () {
     function SonAccount() {
         this.balanceInit = 0;
@@ -22,7 +23,7 @@ var SonAccount = /** @class */ (function () {
         console.log("Versamento andato a buon fine. Saldo attuale: " + this.balanceInit);
     };
     SonAccount.prototype.oneWithDraw = function (val) {
-        if (this.balanceInit - val > 0) {
+        if (this.balanceInit - val >= 0) {
             this.balanceInit -= val;
             console.log("Prelievo andato a buon fine. Saldo attuale: " + this.balanceInit);
         }
@@ -38,8 +39,19 @@ var MotherAccount = /** @class */ (function (_super) {
     }
     MotherAccount.prototype.addInterest = function () {
         this.balanceInit *= 0.9;
+        console.log("Interessi pagati. Saldo attuale: " + this.balanceInit);
     };
     return MotherAccount;
 }(SonAccount));
-var deposit = new SonAccount();
-deposit.oneDeposit(20);
+var deposit = new MotherAccount();
+(_a = document.getElementById("prelievo")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
+    var _a;
+    var sum = Number((_a = document.getElementById("sum")) === null || _a === void 0 ? void 0 : _a.value);
+    deposit.oneWithDraw(sum);
+});
+(_b = document.getElementById("versamento")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
+    var _a;
+    var sum = Number((_a = document.getElementById("sum")) === null || _a === void 0 ? void 0 : _a.value);
+    deposit.oneDeposit(sum);
+});
+(_c = document.getElementById("interessi")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () { return deposit.addInterest(); });
