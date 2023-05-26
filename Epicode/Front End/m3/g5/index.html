@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>My phone</title>
 </head>
 <body>
+    <div class="tel">
+        <div id="ric">
+            <input type="number" min="5" placeholder="Ricarica il credito">
+            <button>Ricarica!</button>
+        </div>
+
+        <div id="call">
+            <input type="number" min="1" placeholder="Inserisci la durata della chiamata">
+            <button>Chiama!</button>
+        </div>
+
+        <div id="dateFilt">
+            <input type="datetime-local">
+            <button>Filtra la tua cronologia chiamate</button>
+        </div>
+
+        <div>
+            <button id="creditCheck">Controlla il tuo credito</button>
+            <button id="callsCheck">Controlla il tuo numero di chiamate</button>
+            <button id="callsHistory">Mostra la cronologia chiamate</button>
+            <button id="deleteCallsHistory">Elimina la cronologia chiamate</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+var _a, _b, _c, _d, _e, _f, _g;
 var Smartphone = /** @class */ (function () {
     function Smartphone() {
         this.carica = 0;
@@ -33,13 +34,19 @@ var Smartphone = /** @class */ (function () {
         return this.registroChiamate;
     };
     Smartphone.prototype.filtraChiamatePerDataOra = function (dataFilter) {
-        return this.registroChiamate.filter(function (chiamata) { return chiamata.data.toLocaleString() == dataFilter.toLocaleString(); });
+        return this.registroChiamate.filter(function (chiamata) {
+            return chiamata.data.toLocaleDateString() == dataFilter.toLocaleDateString() &&
+                chiamata.data.getHours() == dataFilter.getHours() &&
+                chiamata.data.getMinutes() == dataFilter.getMinutes();
+        });
     };
     return Smartphone;
 }());
 var myPhone = new Smartphone();
-myPhone.ricarica(50);
-myPhone.chiamata(8);
-console.log(myPhone.getNumeroChiamate());
-console.log(myPhone.numero404());
-console.log(myPhone.mostraRegistroChiamate());
+(_a = document.querySelector("#ric button")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () { return myPhone.ricarica(Number(document.querySelector("#ric input").value)); });
+(_b = document.querySelector("#call button")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () { return myPhone.chiamata(Number(document.querySelector("#call input").value)); });
+(_c = document.querySelector("#dateFilt button")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () { return console.log(myPhone.filtraChiamatePerDataOra(new Date(document.querySelector("#dateFilt input").value))); });
+(_d = document.getElementById("creditCheck")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", function () { return console.log(myPhone.numero404()); });
+(_e = document.getElementById("callsCheck")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", function () { return console.log(myPhone.getNumeroChiamate()); });
+(_f = document.getElementById("callsHistory")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", function () { return console.log(myPhone.mostraRegistroChiamate()); });
+(_g = document.getElementById("deleteCallsHistory")) === null || _g === void 0 ? void 0 : _g.addEventListener("click", function () { return myPhone.azzeraChiamate(); });

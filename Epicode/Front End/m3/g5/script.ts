@@ -8,7 +8,7 @@ interface Phone{
     carica:number;
     numeroChiamate:number;
     costoMinuto:number;
-    registroChiamate:{}[];
+    registroChiamate:Registro[];
 
     ricarica(euro:number):void;
     numero404():string;
@@ -54,13 +54,26 @@ class Smartphone implements Phone{
         return this.registroChiamate;
     }
     filtraChiamatePerDataOra(dataFilter: Date): Registro[] {
-        return this.registroChiamate.filter(chiamata=>chiamata.data.toLocaleString()==dataFilter.toLocaleString());
+        return this.registroChiamate.filter(chiamata=>
+            chiamata.data.toLocaleDateString()==dataFilter.toLocaleDateString() &&
+            chiamata.data.getHours()==dataFilter.getHours() &&
+            chiamata.data.getMinutes()==dataFilter.getMinutes()
+        );
     }
 }
 
 let myPhone=new Smartphone();
-myPhone.ricarica(50);
-myPhone.chiamata(8)
-console.log(myPhone.getNumeroChiamate());
-console.log(myPhone.numero404());
-console.log(myPhone.mostraRegistroChiamate());
+
+document.querySelector("#ric button")?.addEventListener("click", ()=>myPhone.ricarica(Number((<HTMLInputElement>document.querySelector("#ric input")).value)));
+
+document.querySelector("#call button")?.addEventListener("click", ()=>myPhone.chiamata(Number((<HTMLInputElement>document.querySelector("#call input")).value)));
+
+document.querySelector("#dateFilt button")?.addEventListener("click", ()=>console.log(myPhone.filtraChiamatePerDataOra(new Date((<HTMLInputElement>document.querySelector("#dateFilt input")).value))));
+
+document.getElementById("creditCheck")?.addEventListener("click", ()=>console.log(myPhone.numero404()));
+
+document.getElementById("callsCheck")?.addEventListener("click", ()=>console.log(myPhone.getNumeroChiamate()));
+
+document.getElementById("callsHistory")?.addEventListener("click", ()=>console.log(myPhone.mostraRegistroChiamate()));
+
+document.getElementById("deleteCallsHistory")?.addEventListener("click", ()=>myPhone.azzeraChiamate());
