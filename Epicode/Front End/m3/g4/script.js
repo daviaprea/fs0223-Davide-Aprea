@@ -26,6 +26,7 @@ fetch("./Abbigliamento.json")
     res.forEach(function (el, i) {
         arr.push(new Capo(el.id, el.codprod, el.collezione, el.capo, el.modello, el.quantita, el.colore, el.prezzoivaesclusa, el.prezzoivainclusa, el.disponibile, el.saldo));
         console.log("Prezzo: ".concat(arr[i].getPrice, "\u20AC"));
+        /*arr.push(new Capo())*/
     });
     console.log(arr);
 });
