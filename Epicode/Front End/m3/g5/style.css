@@ -1,8 +1,8 @@
 body{
     height: 100vh;
     margin: 0;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: rgb(209,209,209);
+    background: linear-gradient(0deg, rgba(209,209,209,1) 0%, rgba(250,250,250,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,4 +17,15 @@ body{
 
 .tel div{
     margin: 1rem 0;
+}
+
+.tel input{
+    padding: 5px 15px;
+}
+
+.tel button{
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(165, 165, 165);
+    cursor: pointer;
 }

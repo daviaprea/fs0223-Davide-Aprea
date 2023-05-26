@@ -64,9 +64,15 @@ class Smartphone implements Phone{
 
 let myPhone=new Smartphone();
 
-document.querySelector("#ric button")?.addEventListener("click", ()=>myPhone.ricarica(Number((<HTMLInputElement>document.querySelector("#ric input")).value)));
+document.querySelector("#ric button")?.addEventListener("click", ()=>{
+    let inp=Number((<HTMLInputElement>document.querySelector("#ric input")).value);
+    if(inp>0) myPhone.ricarica(inp);
+});
 
-document.querySelector("#call button")?.addEventListener("click", ()=>myPhone.chiamata(Number((<HTMLInputElement>document.querySelector("#call input")).value)));
+document.querySelector("#call button")?.addEventListener("click", ()=>{
+    let inp=Number((<HTMLInputElement>document.querySelector("#call input")).value);
+    if(inp>0) myPhone.chiamata(inp);
+});
 
 document.querySelector("#dateFilt button")?.addEventListener("click", ()=>console.log(myPhone.filtraChiamatePerDataOra(new Date((<HTMLInputElement>document.querySelector("#dateFilt input")).value))));
 
