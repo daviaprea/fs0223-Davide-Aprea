@@ -1,7 +1,7 @@
 type Registro={
-    id:number;
-    durata:number;
-    data:Date;
+    readonly id:number;
+    readonly durata:number;
+    readonly data:Date;
 }
 
 interface Phone{
