@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "George",
+    "username": "Jackson",
+    "email": "Sre@ail.biz",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Liam",
+    "username": "Leon",
+    "email": "Liam@april.biz",
+    "active": false
+  },
+  {
+    "id": 4,
+    "name": "Uvuvwevwevwe",
+    "username": "Ossas",
+    "email": "Ossas@april.biz",
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Lendne Gham",
+    "username": "Bset",
+    "email": "Sidega@april.biz",
+    "active": false
+  }
+]
