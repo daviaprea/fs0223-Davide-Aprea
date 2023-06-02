@@ -1,3 +1,14 @@
 {
-  "todo" : []
+  "todo": [
+    {
+      "title": "spesa",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "cucina",
+      "completed": false,
+      "id": 2
+    }
+  ]
 }

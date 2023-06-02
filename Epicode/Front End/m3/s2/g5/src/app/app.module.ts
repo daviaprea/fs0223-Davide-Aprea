@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './parts/pages/todo/todo.component';
 import { CompletatiComponent } from './parts/pages/completati/completati.component';
 import { HeaderComponent } from './parts/components/header/header.component';
+import { TodolistComponent } from './parts/components/todolist/todolist.component';
+import { InputTodoComponent } from './parts/components/inputtodo/inputtodo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     CompletatiComponent,
-    HeaderComponent
+    HeaderComponent,
+    TodolistComponent,
+    InputTodoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
