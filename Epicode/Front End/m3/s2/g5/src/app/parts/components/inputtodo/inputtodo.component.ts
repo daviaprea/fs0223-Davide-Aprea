@@ -16,5 +16,6 @@ export class InputTodoComponent {
   createTodo()
   {
     this.todoSvc.addTodo(this.todoObj).then(res=>console.log(res));
+    window.location.reload();
   }
 }

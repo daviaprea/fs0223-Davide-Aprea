@@ -9,6 +9,7 @@ import { HeaderComponent } from './parts/components/header/header.component';
 import { TodolistComponent } from './parts/components/todolist/todolist.component';
 import { InputTodoComponent } from './parts/components/inputtodo/inputtodo.component';
 import { FormsModule } from '@angular/forms';
+import { CompletedComponent } from './parts/components/completed/completed.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     TodolistComponent,
     InputTodoComponent,
+    CompletedComponent,
   ],
   imports: [
     BrowserModule,
