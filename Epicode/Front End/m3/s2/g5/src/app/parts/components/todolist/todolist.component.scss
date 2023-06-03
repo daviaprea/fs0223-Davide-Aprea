@@ -3,7 +3,6 @@ li{
   margin: 10px 0;
   background-color: #F2F2F2;
   border-radius: 5px;
-  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -12,15 +11,27 @@ ul{
   padding: 0;
 }
 
+li span{
+  padding: 5px 10px;
+}
+
 button i{
   color: white;
+  font-size: 1rem;
 }
 
 .delete{
   background-color: red;
 }
 
+.check{
+  background-color: greenyellow;
+}
+
 button{
   border: 0;
   border-radius: 2px;
+  cursor: pointer;
+  height: 100%;
+  width: 2rem;
 }
