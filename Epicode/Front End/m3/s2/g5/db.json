@@ -6,19 +6,14 @@
       "id": 5
     },
     {
-      "title": "curry",
-      "completed": true,
-      "id": 12
-    },
-    {
-      "title": "pasta",
-      "completed": true,
-      "id": 13
-    },
-    {
       "title": "fusilli",
       "completed": true,
       "id": 14
+    },
+    {
+      "title": "pere",
+      "completed": false,
+      "id": 16
     }
   ]
 }

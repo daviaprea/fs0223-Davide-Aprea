@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Todo } from 'src/app/models/todo';
 import { TodosService } from 'src/app/services/todos.service';
 
@@ -9,11 +10,14 @@ import { TodosService } from 'src/app/services/todos.service';
 })
 export class TodolistComponent implements OnInit{
   todoArr:Todo[]=[]
-  constructor(private todoSvc:TodosService){}
+  constructor(private todoSvc:TodosService, public route:ActivatedRoute){}
   ngOnInit(){
+    console.log(this.route.snapshot.routeConfig?.path);
     this.todoSvc.getTodos().then(res=>{
       console.log(res);
-      this.todoArr=res.filter(el=>!el.completed);
+
+      if(this.route.snapshot.routeConfig?.path=="")this.todoArr=res.filter(el=>!el.completed);
+      else this.todoArr=res.filter(el=>el.completed);
     });
   }
 
