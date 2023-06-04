@@ -1,3 +1,7 @@
+div{
+  display: flex;
+}
+
 input{
   padding: 5px 10px;
 }
@@ -8,8 +12,13 @@ input::placeholder{
 
 button{
   color: white;
-  background-color: #8E49E7;
+  background-color: rgb(75, 132, 229);
   border: 0;
   border-radius: 0 3px 3px 0;
   cursor: pointer;
+  width: 2rem;
+}
+
+button i{
+  font-size: 1rem;
 }
