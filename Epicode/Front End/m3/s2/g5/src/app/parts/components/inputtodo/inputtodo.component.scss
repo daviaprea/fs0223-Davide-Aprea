@@ -1,3 +1,15 @@
 input{
   padding: 5px 10px;
 }
+
+input::placeholder{
+  font-family: 'Jost', sans-serif;
+}
+
+button{
+  color: white;
+  background-color: #8E49E7;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
