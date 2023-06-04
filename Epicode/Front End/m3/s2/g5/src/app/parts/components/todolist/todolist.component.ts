@@ -16,12 +16,14 @@ export class TodolistComponent implements OnInit{
   ngOnInit(){
     console.log(this.route.snapshot.routeConfig?.path);
     this.todoSvc.getTodos().then(res=>{
-      console.log(res);
+      setTimeout(()=>{
+        console.log(res);
 
-      if(this.route.snapshot.routeConfig?.path=="")this.todoArr=res.filter(el=>!el.completed);
-      else this.todoArr=res.filter(el=>el.completed);
+        if(this.route.snapshot.routeConfig?.path=="")this.todoArr=res.filter(el=>!el.completed);
+        else this.todoArr=res.filter(el=>el.completed);
 
-      this.contentLoaded=true;
+        this.contentLoaded=true;
+      }, 2000);
     });
   }
 

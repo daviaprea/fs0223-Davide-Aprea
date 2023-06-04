@@ -15,18 +15,20 @@ export class CustmessComponent {
   ngOnInit(){
     console.log(this.route.snapshot.routeConfig?.path);
     this.todoSvc.getTodos().then(res=>{
-      console.log(res);
+      setTimeout(()=>{
+        console.log(res);
 
-      if(this.route.snapshot.routeConfig?.path=="")
-      {
-        this.todoArr=res.filter(el=>!el.completed);
-        this.customMess=`You have ${this.todoArr.length} tasks left.`;
-      }
-      else
-      {
-        this.todoArr=res.filter(el=>el.completed);
-        this.customMess=`You have completed ${this.todoArr.length} tasks.`;
-      }
+        if(this.route.snapshot.routeConfig?.path=="")
+        {
+          this.todoArr=res.filter(el=>!el.completed);
+          this.customMess=`You have ${this.todoArr.length} tasks left.`;
+        }
+        else
+        {
+          this.todoArr=res.filter(el=>el.completed);
+          this.customMess=`You have completed ${this.todoArr.length} tasks.`;
+        }
+      } ,2000);
     });
   }
 }
