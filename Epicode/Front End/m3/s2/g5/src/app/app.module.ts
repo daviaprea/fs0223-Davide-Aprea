@@ -9,7 +9,6 @@ import { HeaderComponent } from './parts/components/header/header.component';
 import { TodolistComponent } from './parts/components/todolist/todolist.component';
 import { InputTodoComponent } from './parts/components/inputtodo/inputtodo.component';
 import { FormsModule } from '@angular/forms';
-import { CompletedComponent } from './parts/components/completed/completed.component';
 import { CustmessComponent } from './parts/components/custmess/custmess.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { CustmessComponent } from './parts/components/custmess/custmess.componen
     HeaderComponent,
     TodolistComponent,
     InputTodoComponent,
-    CompletedComponent,
     CustmessComponent,
   ],
   imports: [
