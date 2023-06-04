@@ -10,6 +10,7 @@ import { TodolistComponent } from './parts/components/todolist/todolist.componen
 import { InputTodoComponent } from './parts/components/inputtodo/inputtodo.component';
 import { FormsModule } from '@angular/forms';
 import { CompletedComponent } from './parts/components/completed/completed.component';
+import { CustmessComponent } from './parts/components/custmess/custmess.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CompletedComponent } from './parts/components/completed/completed.compo
     TodolistComponent,
     InputTodoComponent,
     CompletedComponent,
+    CustmessComponent,
   ],
   imports: [
     BrowserModule,
