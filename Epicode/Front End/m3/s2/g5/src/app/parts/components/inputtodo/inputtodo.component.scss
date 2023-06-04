@@ -4,6 +4,14 @@ div{
 
 input{
   padding: 5px 10px;
+  border: 1px solid rgb(179, 179, 179);
+  border-right: 0;
+}
+
+input:focus{
+  outline: 0;
+  border: 1px solid rgb(75, 132, 229);
+  border-right: 0;
 }
 
 input::placeholder{
@@ -17,6 +25,12 @@ button{
   border-radius: 0 3px 3px 0;
   cursor: pointer;
   width: 2rem;
+  transition: all 150ms;
+}
+
+button:hover{
+  scale: 1.1;
+  border-radius: 3px;
 }
 
 button i{
