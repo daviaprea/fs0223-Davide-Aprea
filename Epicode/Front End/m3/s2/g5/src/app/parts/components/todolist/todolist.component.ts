@@ -9,7 +9,9 @@ import { TodosService } from 'src/app/services/todos.service';
   styleUrls: ['./todolist.component.scss']
 })
 export class TodolistComponent implements OnInit{
-  todoArr:Todo[]=[]
+  todoArr:Todo[]=[];
+  contentLoaded=false;
+
   constructor(private todoSvc:TodosService, public route:ActivatedRoute){}
   ngOnInit(){
     console.log(this.route.snapshot.routeConfig?.path);
@@ -18,6 +20,8 @@ export class TodolistComponent implements OnInit{
 
       if(this.route.snapshot.routeConfig?.path=="")this.todoArr=res.filter(el=>!el.completed);
       else this.todoArr=res.filter(el=>el.completed);
+
+      this.contentLoaded=true;
     });
   }
 

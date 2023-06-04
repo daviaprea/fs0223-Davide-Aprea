@@ -1,9 +1,12 @@
-<ul>
-  <li *ngFor="let item of todoArr">
-    <span>{{item.title}}</span>
-    <div>
-      <button *ngIf="route.snapshot.routeConfig?.path==''" class="check" (click)="completeTask(item)"><i class="bi bi-check-circle"></i></button>
-      <button class="delete" (click)="deleteTask(item.id)"><i class="bi bi-x-circle-fill"></i></button>
-    </div>
-  </li>
-</ul>
+<div class="container">
+  <ul *ngIf="contentLoaded">
+    <li *ngFor="let item of todoArr">
+      <span>{{item.title}}</span>
+      <div>
+        <button *ngIf="route.snapshot.routeConfig?.path==''" class="check" (click)="completeTask(item)"><i class="bi bi-check-circle"></i></button>
+        <button class="delete" (click)="deleteTask(item.id)"><i class="bi bi-x-circle-fill"></i></button>
+      </div>
+    </li>
+  </ul>
+  <div *ngIf="!contentLoaded" class="loader"></div>
+</div>
