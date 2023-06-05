@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row row-cols-3 g-4">
+    <div *ngFor="let pic of photoArr" class="col">
+      <div class="card w-100" style="width: 18rem;">
+        <img src="{{pic.thumbnailUrl}}" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{pic.title}}</h5>
+          <i (click)="likePhoto(pic)" [ngClass]="{'bi bi-heart': !pic.liked, 'bi bi-heart-fill fillHeart': pic.liked}"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
