@@ -11,9 +11,9 @@ export class PhotoService {
   apiUrl="http://localhost:3000/photos";
   constructor(private http:HttpClient){}
 
-  getPhotos()//:Observable<Object[]>
+  getPhotos():Observable<Photo[]>
   {
-    return this.http.get(this.apiUrl);
+    return this.http.get<Photo[]>(this.apiUrl);
   }
 
   like(obj:Photo)
