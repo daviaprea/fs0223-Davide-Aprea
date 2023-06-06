@@ -1,0 +1,43 @@
+<h2 class="text-center">Template driven form</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form #f="ngForm" (ngSubmit)="sub(f)">
+        <div class="mb-3">
+          <label for="heroName" class="form-label">Hero name</label>
+          <input type="text" class="form-control" [ngClass]="''" id="heroName" name="heroName" ngModel required #heroName="ngModel">
+          <p *ngIf="heroName.invalid && heroName.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="alterEgo" class="form-label">Alter ego</label>
+          <input type="text" class="form-control" id="alterEgo" name="alterEgo" ngModel required #alterEgo="ngModel">
+          <p *ngIf="alterEgo.invalid && alterEgo.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <select class="form-select" aria-label="Default select example" name="power" ngModel required>
+            <option selected>Select hero's power</option>
+            <option value="aqua">Aqua</option>
+            <option value="fire">Fire</option>
+            <option value="wind">Wind</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="enemy" class="form-label">Enemy</label>
+          <input type="text" max="10" class="form-control" id="enemy" name="enemy" ngModel required #enemy="ngModel">
+          <p *ngIf="enemy.invalid && enemy.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="planet" class="form-label">Planet</label>
+          <input type="text" min="5" class="form-control" id="planet" name="planet" ngModel required #planet="ngModel">
+          <p *ngIf="planet.invalid && planet.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="weakness" class="form-label">Weakness</label>
+          <input type="text" class="form-control" id="weakness" name="weakness" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
