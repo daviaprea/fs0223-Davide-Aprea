@@ -6,17 +6,17 @@
       <form #f="ngForm" (ngSubmit)="sub(f)">
         <div class="mb-3">
           <label for="heroName" class="form-label">Hero name</label>
-          <input type="text" class="form-control" [ngClass]="''" id="heroName" name="heroName" ngModel required #heroName="ngModel">
+          <input type="text" class="form-control" [ngClass]="{'is-valid': heroName.valid && heroName.touched}" id="heroName" name="heroName" ngModel required #heroName="ngModel">
           <p *ngIf="heroName.invalid && heroName.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
         </div>
         <div class="mb-3">
           <label for="alterEgo" class="form-label">Alter ego</label>
-          <input type="text" class="form-control" id="alterEgo" name="alterEgo" ngModel required #alterEgo="ngModel">
+          <input type="text" class="form-control" [ngClass]="{'is-valid': alterEgo.valid && alterEgo.touched}" id="alterEgo" name="alterEgo" ngModel required #alterEgo="ngModel">
           <p *ngIf="alterEgo.invalid && alterEgo.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
         </div>
         <div class="mb-3">
-          <select class="form-select" aria-label="Default select example" name="power" ngModel required>
-            <option selected>Select hero's power</option>
+          <label for="power" class="form-label">Select hero's power</label>
+          <select class="form-select" aria-label="Default select example" id="power" name="power" ngModel required>
             <option value="aqua">Aqua</option>
             <option value="fire">Fire</option>
             <option value="wind">Wind</option>
@@ -24,13 +24,13 @@
         </div>
         <div class="mb-3">
           <label for="enemy" class="form-label">Enemy</label>
-          <input type="text" max="10" class="form-control" id="enemy" name="enemy" ngModel required #enemy="ngModel">
+          <input type="text" max="10" class="form-control" [ngClass]="{'is-valid': enemy.valid && enemy.touched}" id="enemy" name="enemy" ngModel required #enemy="ngModel">
           <p *ngIf="enemy.invalid && enemy.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
         </div>
         <div class="mb-3">
           <label for="planet" class="form-label">Planet</label>
-          <input type="text" min="5" class="form-control" id="planet" name="planet" ngModel required #planet="ngModel">
-          <p *ngIf="planet.invalid && planet.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+          <input type="text" min="5" class="form-control" [ngClass]="{'is-valid': planet.valid && planet.touched}" id="planet" name="planet" ngModel required #planet="ngModel">
+          <p *ngIf="planet.invalid && planet.touched" class="alert alert-danger p-2 mt-2">Please, insert a minimum of 5 characters.</p>
         </div>
         <div class="mb-3">
           <label for="weakness" class="form-label">Weakness</label>
