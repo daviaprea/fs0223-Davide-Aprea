@@ -22,6 +22,6 @@ export class ReactformComponent implements OnInit{
 
   send()
   {
-
+    console.log(this.f);
   }
 }
