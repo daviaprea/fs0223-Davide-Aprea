@@ -24,12 +24,12 @@
         </div>
         <div class="mb-3">
           <label for="enemy" class="form-label">Enemy</label>
-          <input type="text" max="10" class="form-control" [ngClass]="{'is-valid': enemy.valid && enemy.touched}" id="enemy" name="enemy" ngModel required #enemy="ngModel">
+          <input type="text" maxlength="10" class="form-control" [ngClass]="{'is-valid': enemy.valid && enemy.touched}" id="enemy" name="enemy" ngModel required #enemy="ngModel">
           <p *ngIf="enemy.invalid && enemy.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
         </div>
         <div class="mb-3">
           <label for="planet" class="form-label">Planet</label>
-          <input type="text" min="5" class="form-control" [ngClass]="{'is-valid': planet.valid && planet.touched}" id="planet" name="planet" ngModel required #planet="ngModel">
+          <input type="text" minlength="5" class="form-control" [ngClass]="{'is-valid': planet.valid && planet.touched}" id="planet" name="planet" ngModel required #planet="ngModel">
           <p *ngIf="planet.invalid && planet.touched" class="alert alert-danger p-2 mt-2">Please, insert a minimum of 5 characters.</p>
         </div>
         <div class="mb-3">

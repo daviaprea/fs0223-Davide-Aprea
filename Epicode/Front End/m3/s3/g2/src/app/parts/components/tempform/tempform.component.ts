@@ -9,6 +9,6 @@ import { NgForm } from '@angular/forms';
 export class TempformComponent {
   sub(f:NgForm)
   {
-
+    console.log(f);
   }
 }
