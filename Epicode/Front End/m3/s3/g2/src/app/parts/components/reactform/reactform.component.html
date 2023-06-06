@@ -1,1 +1,45 @@
-<p>reactform works!</p>
+<h2 class="text-center">Reactive form</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form [formGroup]="f" (ngSubmit)="send()">
+        <div class="mb-3">
+          <label for="heroName" class="form-label">Hero name</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('heroName')!.valid && f.get('heroName')!.touched}" id="heroName" formControlName="heroName">
+          <p *ngIf="!f.get('heroName')!.valid && f.get('heroName')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="alterEgo" class="form-label">Alter ego</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('alterEgo')!.valid && f.get('alterEgo')!.touched}" id="alterEgo" formControlName="alterEgo">
+          <p *ngIf="!f.get('alterEgo')!.valid && f.get('alterEgo')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="power" class="form-label">Select hero's power</label>
+          <select class="form-select" [ngClass]="{'is-valid': f.get('power')!.valid && f.get('power')!.touched}" aria-label="Default select example" id="power" formControlName="power">
+            <option value="aqua">Aqua</option>
+            <option value="fire">Fire</option>
+            <option value="wind">Wind</option>
+          </select>
+          <p *ngIf="!f.get('power')!.valid && f.get('power')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="enemy" class="form-label">Enemy</label>
+          <input type="text" max="10" class="form-control" [ngClass]="{'is-valid': f.get('enemy')!.valid && f.get('enemy')!.touched}" id="enemy" formControlName="enemy">
+          <p *ngIf="!f.get('enemy')!.valid && f.get('enemy')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="planet" class="form-label">Planet</label>
+          <input type="text" min="5" class="form-control" [ngClass]="{'is-valid': f.get('planet')!.valid && f.get('planet')!.touched}" id="planet" formControlName="planet">
+          <p *ngIf="!f.get('planet')!.valid && f.get('planet')!.touched" class="alert alert-danger p-2 mt-2">Please, insert a minimum of 5 characters.</p>
+        </div>
+        <div class="mb-3">
+          <label for="weakness" class="form-label">Weakness</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('weakness')!.valid && f.get('weakness')!.touched}" id="weakness" formControlName="weakness">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.disabled">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+

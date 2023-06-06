@@ -8,7 +8,7 @@ import { ReactformpageComponent } from './parts/pages/reactformpage/reactformpag
 import { TempformComponent } from './parts/components/tempform/tempform.component';
 import { ReactformComponent } from './parts/components/reactform/reactform.component';
 import { HeaderComponent } from './parts/components/header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
