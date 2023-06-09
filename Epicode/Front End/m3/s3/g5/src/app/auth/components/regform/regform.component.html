@@ -1,0 +1,31 @@
+<h2 class="text-center">Sign up</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form [formGroup]="f" (ngSubmit)="send()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('name')!.valid && f.get('name')!.touched}" id="name" formControlName="name">
+          <p *ngIf="!f.get('name')!.valid && f.get('name')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="surname" class="form-label">Surname</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('surname')!.valid && f.get('surname')!.touched}" id="surname" formControlName="surname">
+          <p *ngIf="!f.get('surname')!.valid && f.get('surname')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" [ngClass]="{'is-valid': f.get('email')!.valid && f.get('email')!.touched}" id="email" formControlName="email">
+          <p *ngIf="!f.get('email')!.valid && f.get('email')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" [ngClass]="{'is-valid': f.get('password')!.valid && f.get('password')!.touched}" id="password" formControlName="password">
+          <p *ngIf="!f.get('password')!.valid && f.get('password')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

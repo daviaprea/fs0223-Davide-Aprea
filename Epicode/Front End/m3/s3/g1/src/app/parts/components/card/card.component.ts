@@ -12,6 +12,7 @@ export class CardComponent implements OnInit{
   photoArr:any=[];
   constructor(private photoSvc:PhotoService){}
   ngOnInit(){
+    this.photoSvc.subFunc()
     this.photoSvc.getPhotos().subscribe(data=>{
 
       this.photoArr=data;

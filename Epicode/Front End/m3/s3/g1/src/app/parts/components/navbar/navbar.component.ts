@@ -7,11 +7,12 @@ import { Photo } from '../../models/photo';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit{
   photoArr:Photo[]=[];
   constructor(private photoSvc:PhotoService){}
+
   ngOnInit(){
-    this.photoSvc.getPhotos().subscribe(data=>{
+    this.photoSvc.getPhotos().subscribe((data:Photo[])=>{
 
       this.photoArr=data.filter((el:Photo)=>el.liked==true);
     });
