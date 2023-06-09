@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { LogUser } from '../../models/log-user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logform',
@@ -11,7 +12,7 @@ import { LogUser } from '../../models/log-user';
 export class LogformComponent implements OnInit{
   f!:FormGroup;
 
-  constructor(private authSvc:AuthService){}
+  constructor(private authSvc:AuthService, private router:Router){}
 
   ngOnInit(): void {
     this.f=new FormGroup({
@@ -23,6 +24,10 @@ export class LogformComponent implements OnInit{
   send()
   {
     this.authSvc.login(new LogUser(this.f.value.email, this.f.value.password))
-    .subscribe(data=>console.log(data));
+    .subscribe(data=>
+    {
+      console.log(data);
+      this.router.navigate(["/dashboard"]);
+    });
   }
 }
