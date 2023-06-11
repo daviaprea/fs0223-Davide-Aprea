@@ -6,6 +6,7 @@ import { LogUser } from '../models/log-user';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, map, tap } from 'rxjs';
 import { LoggedUser } from '../models/logged-user';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class AuthService {
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map((data) => Boolean(data)));
 
-  constructor(private http:HttpClient)
+  constructor(private http:HttpClient, private router:Router)
   {
     this.restoreUser();
   }
@@ -53,6 +54,6 @@ export class AuthService {
   {
     this.authSubject.next(null);
     localStorage.removeItem("user");
-
+    this.router.navigate(["/auth"]);
   }
 }

@@ -2,11 +2,45 @@
   "users": [
     {
       "email": "xuqiwyrila@mailinator.com",
-      "password": "$2a$10$bEDZOoaKVmBTQHt5NZhpC..QhQYXhBnhuYNe7jTLHC6K1n/Brdrh.",
+      "password": "$2a$10$vbudtKN9quZa8NJe5pI55e.cJgX3/vBRUvXZ2W3kYRdLxu8SjXznC",
       "name": "Zelenia Raymond",
       "surname": "Holloway",
-      "games": [],
+      "games": [
+        {
+          "title": "Battlefield 2042",
+          "cover": "https://gaming-cdn.com/images/products/6690/616x353/battlefield-2042-pc-gioco-origin-cover.jpg?v=1644708475",
+          "price": 20
+        }
+      ],
       "id": 1
+    },
+    {
+      "email": "qivogeguzu@mailinator.com",
+      "password": "$2a$10$HrhdrqqCWJ0v4S9y1E4a7eLvfXW0WcV7XO3JISOP1uNENMbqyN2Ie",
+      "name": "Lydia Hogan",
+      "surname": "Landry",
+      "games": [
+        {
+          "title": "Mario + Rabbids Kingdom Battle Switch",
+          "cover": "https://gaming-cdn.com/images/products/8377/616x353/mario-rabbids-kingdom-battle-switch-switch-gioco-nintendo-eshop-europe-cover.jpg?v=1650633334",
+          "price": 15
+        }
+      ],
+      "id": 2
+    },
+    {
+      "email": "kotubygih@mailinator.com",
+      "password": "$2a$10$MuYsfHJSb1RuI/JTwo3bt.2/S2Cwr5znL4KRe/G2CjMv3.Q4BkS7i",
+      "name": "Fleur Goodwin",
+      "surname": "Munoz",
+      "games": [
+        {
+          "title": "Battlefield 2042",
+          "cover": "https://gaming-cdn.com/images/products/6690/616x353/battlefield-2042-pc-gioco-origin-cover.jpg?v=1644708475",
+          "price": 20
+        }
+      ],
+      "id": 3
     }
   ]
 }
