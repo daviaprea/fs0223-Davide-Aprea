@@ -9,7 +9,7 @@ import { Game } from '../../models/game';
 })
 export class CardComponent implements OnInit{
   games:Game[]=[];
-  constructor(private crudSvc:CrudService){}
+  constructor(protected crudSvc:CrudService){}
   ngOnInit()
   {
     this.crudSvc.getData().subscribe(obj=>this.games=obj.games)

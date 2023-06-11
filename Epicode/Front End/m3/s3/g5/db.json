@@ -43,32 +43,18 @@
       "id": 3
     },
     {
-      "email": "cyluwygaho@mailinator.com",
-      "password": "$2a$10$GmEM0T8ySGR2taLwuWWCvOfnaDChDHFxZwXZe4WynH9okTuVGZAfK",
-      "name": "Natalie Becker",
-      "surname": "Koch",
+      "email": "nefyq@mailinator.com",
+      "password": "$2a$10$ruBtjOe9wVcDTsGn4bN1IeRwUIPoxAfdIk6zfMj7le/KCn1pkaPsy",
+      "name": "Cole Marshall",
+      "surname": "Joyner",
       "games": [
         {
-          "title": "Mario",
-          "cover": "https://gaming-cdn.com/images/products/8377/616x353/mario-rabbids-kingdom-battle-switch-switch-gioco-nintendo-eshop-europe-cover.jpg?v=1650633334",
-          "price": 12
+          "title": "Hey",
+          "cover": "https://gaming-cdn.com/images/products/6690/616x353/battlefield-2042-pc-gioco-origin-cover.jpg?v=1644708475",
+          "price": 47
         }
       ],
       "id": 4
-    },
-    {
-      "email": "qapibul@mailinator.com",
-      "password": "$2a$10$3OGeunHHnYaWeQ2LQrLKNumCwrAKXCgTU557AfKeAQvdHY4DA6X3K",
-      "name": "Echo Emerson",
-      "surname": "Pacheco",
-      "games": [
-        {
-          "title": "Mega Man Battle Network Legacy Collection (Vol.1 + Vol.2)",
-          "cover": "https://gaming-cdn.com/images/products/13986/616x353/mega-man-battle-network-legacy-collection-vol-1-vol-2-pc-gioco-steam-cover.jpg?v=1681820949",
-          "price": 43
-        }
-      ],
-      "id": 5
     }
   ]
 }
