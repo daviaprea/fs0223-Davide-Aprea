@@ -1,0 +1,26 @@
+<h2 class="text-center">Add a new game</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form [formGroup]="f" (ngSubmit)="addGame()">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('title')!.valid && f.get('title')!.touched}" id="title" formControlName="title">
+          <p *ngIf="!f.get('title')!.valid && f.get('title')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="cover" class="form-label">Cover URL</label>
+          <input type="text" class="form-control" [ngClass]="{'is-valid': f.get('cover')!.valid && f.get('cover')!.touched}" id="cover" formControlName="cover">
+          <p *ngIf="!f.get('cover')!.valid && f.get('cover')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" [ngClass]="{'is-valid': f.get('price')!.valid && f.get('price')!.touched}" id="price" formControlName="price">
+          <p *ngIf="!f.get('price')!.valid && f.get('price')!.touched" class="alert alert-danger p-2 mt-2">This field is required.</p>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Add game</button>
+      </form>
+    </div>
+  </div>
+</div>

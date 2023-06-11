@@ -18,7 +18,15 @@ export class AuthService {
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map((data) => Boolean(data)));
 
-  constructor(private http:HttpClient){}
+  constructor(private http:HttpClient)
+  {
+    this.restoreUser();
+  }
+
+  register(regUser:RegUser)
+  {
+    return this.http.post<RegUser>(environment.regUrl, regUser);
+  }
 
   login(logUser:LogUser)
   {
@@ -27,15 +35,24 @@ export class AuthService {
         this.authSubject.next(data);
         localStorage.setItem('user', JSON.stringify(data));
 
-        const expDate = this.jwtHelper.getTokenExpirationDate(
-          data.accessToken
-        ) as Date;
+        const expDate = this.jwtHelper.getTokenExpirationDate(data.accessToken) as Date;
       })
     );
   }
 
-  register(regUser:RegUser)
+  restoreUser()
   {
-    return this.http.post<RegUser>(environment.regUrl, regUser);
+    const userJson=localStorage.getItem("user");
+    if(!userJson) return;
+    const user:LoggedUser=JSON.parse(userJson);
+    if(this.jwtHelper.isTokenExpired(user.accessToken)) return;
+    this.authSubject.next(user);
+  }
+
+  logout()
+  {
+    this.authSubject.next(null);
+    localStorage.removeItem("user");
+
   }
 }
