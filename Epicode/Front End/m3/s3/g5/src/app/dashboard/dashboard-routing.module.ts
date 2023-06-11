@@ -5,9 +5,10 @@ import { CardComponent } from './components/card/card.component';
 import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'card', component: CardComponent },
-  { path: 'add', component: GameformComponent }
+  { path: '', component: DashboardComponent , children:[
+    { path: 'products', component: CardComponent },
+    { path: 'add', component: GameformComponent }
+  ]}
 ];
 
 @NgModule({
